@@ -1,18 +1,20 @@
 <!DOCTYPE HTML>
 <html>
- <head>
-  <title>Search for Coffee</title>
- </head>
- <body>
-
-      <input type="text" placeholder="Enter coffee..." id="coffee" required>
+  <head>
+    <title>Search for Coffee</title>
+  </head>
+  <form>
+  	<div class="randomcontainer">
+      <input type="text" placeholder="Enter coffee..." id="coffee">
       <button type="submit">Search...</button>
+    </div>
 
-<p></p>
+	<div class="randomcontainer">
+      <button formaction="./coffee_hunter.html">Random Coffee</button>
+	</div>
 
-<form action="/main_page.html">
-    <input type="submit" value="BACK" />
-</form>
- 
- </body>
+	<div class="backcontainer">
+		<button formaction="javascript:history.go(-1)">Back</button>
+	</div>
+  </form>
 </html>
