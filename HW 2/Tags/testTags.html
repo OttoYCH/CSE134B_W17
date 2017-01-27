@@ -26,13 +26,27 @@
          Password: <input type="text" name="Password" value="abc123">
        </div>   
 
-    
+    <form>
+      <div class="homecontainer">
+        <button formaction="./index.html">Home</button>
+      </div>
+    </form>    
 
   
   </body>
-  <form>
-    <div class="homecontainer">
-      <button formaction="./index.html">Home</button>
-    </div>
-  </form>
+  
+
+
+<script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA03p-Lh4OJLA4vrJzhMn8nYv_g49K5V9U",
+    authDomain: "coffee-dex.firebaseapp.com",
+    databaseURL: "https://coffee-dex.firebaseio.com",
+    storageBucket: "coffee-dex.appspot.com",
+    messagingSenderId: "233358791708"
+  };
+  firebase.initializeApp(config);
+</script>
 </html>
