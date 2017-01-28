@@ -23,17 +23,21 @@ thead
 audio
 bdi
 bdo
+canvas
+data
+embed
+math
+meter
+noscript
+object
+output
 
 Tags Remaining to test: 
 
 area
-canvas
-data datalist
-embed
+datalist
 keygen
-map math meter
-noscript
-object output
+map
 progress
 select
 template

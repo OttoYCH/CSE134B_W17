@@ -147,8 +147,46 @@
 
   <p><data value="42">This is a data tag assigned value "42."</data></p>
 
-  <p>The following is an embed tag</p>
+  <p>The following is an embed tag:</p>
   <embed src="car_speakers.swf">
+
+  <p>The following uses the math tag:</p>
+  <math xmlns="http://www.w3.org/1998/Math/MathML">
+		
+       <mrow>
+          <msup><mi>a</mi><mn>2</mn></msup>
+          <mo>+</mo>
+				
+          <msup><mi>b</mi><mn>2</mn></msup>
+          <mo>=</mo>
+				
+          <msup><mi>c</mi><mn>2</mn></msup>
+       </mrow>
+			
+   </math>
+
+  <p>The following uses the meter tag:</p>
+  <meter value="2" min="0" max="10">2 out of 10</meter>
+
+  <br>
+  <br>
+  <script>
+	document.write("This is a noscript tag, this browser has JavaScript support")
+  </script>
+  <noscript>This is a noscript tag, this browser does not have JavaScript support</noscript>
+
+  <p>The following uses the object tag:</p>
+  <object width="400" height="400" data="car_speakers.swf">
+  </object>
+
+  <br>
+  <br>
+  <p>The following uses the output tag</p>
+  <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+	<input type="range" id="a" value="50">100
+	+<input type="number" id="b" value="50">
+	=<output name="x" for="a b"></output>
+  </form>
 
 </body>
   <nav>
