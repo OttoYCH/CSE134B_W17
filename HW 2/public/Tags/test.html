@@ -117,6 +117,77 @@
 	<footer>
 	    <p>this is not important and within a footer</p>
 	</footer>
+
+	<audio controls>
+		<source src="horse.ogg" type="audio/ogg">
+		<source src="horse.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+  </audio>
+  <p>
+  	<strong>Note:</strong> This is an audio tag.
+  </p>
+
+  <ul> This is a bdi tag.
+	 <li>User <bdi>hrefs</bdi>: 60 points</li>
+	 <li>User <bdi>jdoe</bdi>: 80 points</li>
+	 <li>User <bdi>إيان</bdi>: 90 points</li>
+  </ul>
+
+  <p>This is a bdo tag.</p>  
+  <p><bdo dir="rtl">This is a bdo tag.</bdo></p> 
+
+  <canvas id="myCanvas">Your browser does not support the HTML5 canvas tag.</canvas>
+  <script>
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  ctx.fillStyle = "#FF96A1";
+  ctx.fillRect(30, 20, 60, 140);
+  </script>
+  <p><strong> Note:</strong> This is a canvas tag.</p> 
+
+  <p><data value="42">This is a data tag assigned value "42."</data></p>
+
+  <p>The following is an embed tag:</p>
+  <embed src="car_speakers.swf">
+
+  <p>The following uses the math tag:</p>
+  <math xmlns="http://www.w3.org/1998/Math/MathML">
+		
+       <mrow>
+          <msup><mi>a</mi><mn>2</mn></msup>
+          <mo>+</mo>
+				
+          <msup><mi>b</mi><mn>2</mn></msup>
+          <mo>=</mo>
+				
+          <msup><mi>c</mi><mn>2</mn></msup>
+       </mrow>
+			
+   </math>
+
+  <p>The following uses the meter tag:</p>
+  <meter value="2" min="0" max="10">2 out of 10</meter>
+
+  <br>
+  <br>
+  <script>
+	document.write("This is a noscript tag, this browser has JavaScript support")
+  </script>
+  <noscript>This is a noscript tag, this browser does not have JavaScript support</noscript>
+
+  <p>The following uses the object tag:</p>
+  <object width="400" height="400" data="car_speakers.swf">
+  </object>
+
+  <br>
+  <br>
+  <p>The following uses the output tag</p>
+  <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+	<input type="range" id="a" value="50">100
+	+<input type="number" id="b" value="50">
+	=<output name="x" for="a b"></output>
+  </form>
+
 </body>
   <nav>
   <form>

@@ -20,18 +20,24 @@ text area
 class
 href
 thead
+audio
+bdi
+bdo
+canvas
+data
+embed
+math
+meter
+noscript
+object
+output
 
 Tags Remaining to test: 
 
-area audio
-bdi bdo
-canvas
-data datalist
-embed
+area
+datalist
 keygen
-map math meter
-noscript
-object output
+map
 progress
 select
 template
