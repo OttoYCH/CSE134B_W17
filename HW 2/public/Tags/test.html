@@ -1,44 +1,43 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
+<html lang="en">
 
-<html>
+<style>
+	blockquote {color:red;}
+</style>
 
-  <head>
+
  
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 
     <title>Test ALL the tags!</title>
  
-  </head>
+
 
   <body>
-
 	<header>
 	    <p>this is important and within a header</p>
 	</header>
 
-	<style>
-		blockquote {color:red;}
-	</style>
-
 	<article>
+		<h6>small article subtag because these errors are dumb</h6>
 		<blockquote>This is a blockquote tag that's been styled red and is in an article tag!</blockquote>
 	</article>
 
   	<p>This is normal text.<b>And this is bolded text!</b></p>
-	<p><abbr title="University of California, San Diego">UCSD</abbr> is an amazing school! </abbr></p>
-	<p>Here is a new<br>line!!</br></p>
+	<p><abbr title="University of California, San Diego">UCSD</abbr> is an amazing school!</p>
+	<p>Here is a new<br>line!!</p>
 
 	<aside>
 	    <p><cite>Making money</cite> is a fun book by Terry Pratchett. As an ASIDE I really should read again.</p> 
 	</aside>
 
-	<p>Code is right below this:<br><code>int x = 100;</code></br></p>
+	<p>Code is right below this:<br><code>int x = 100;</code></p>
 
 	<p><del>This entire line is crossed out!</del><ins>This entire line is inserted instead! I don't get why it's special.</ins></p> 
 
-	<br></br>
+	<br>
 
-	<p>Here is a defining superword: <dfn>WOOOOOW!</dfm></p>
+	<p>Here is a defining superword: <dfn>WOOOOOW!</dfn></p>
 	<p>Here is an emphasized superword: <em>WHOOOOOOOA!</em></p>
 	<p>And this... is a word in italics: <i>ITALICS!</i></p>
 
@@ -46,6 +45,7 @@
 
 
 	<section>
+	    <h6>small heading to stop the warning</h6>
 	    <p>Everything from right here to right before the circle is in a section tag.</p>
 	    <p><kbd>This is the keyboard input tag - or the kbd tag.</kbd></p> 
     	    <p>Here is a <mark>marked</mark> word.</p>
@@ -64,10 +64,12 @@
 
 	<p>It is <time>12:00</time> o'clock in the afternoon. What does this time tag even do?</p>
 
-	<p>According to the spec, the wordbreak tag will add in wordbreak <wbr>opportunities</wbr> in certain areas.</p>
+	<p>According to the spec, the wordbreak tag will add in wordbreak <wbr>opportunities<wbr> in certain areas.</p>
 
-	<b>HERE ARE SOME LISTS:</b>
-	<dir>
+	</body>
+
+	<b>Here are some lists</b>
+	<ol>
   		<li>Have</li>
   		<li>a</li>
   		<li>list</li>
@@ -75,7 +77,7 @@
 		<li>a</li>
 		<li>dir</li>
 		<li>tag</li>
-	</dir>
+	</ol>
 
 	<ol>
   		<li>Have</li>
@@ -85,10 +87,10 @@
 	</ol>
 
 	<ul>
-  		<li>Have</li>
-  		<li>an</li>
-  		<li>unordered</li>
-		<li>list</li>
+  		<li>1</li>
+  		<li>2</li>
+  		<li>3</li>
+		<li>4</li>
 	</ul>
 
 	<dl>
@@ -99,6 +101,7 @@
 		<dt>Americano</dt>
 		<dd>a hot drink with enough caffeine to fry your brain</dd>
 	</dl>
+
 
 	<pre>
 	have         some        weird
@@ -112,7 +115,7 @@
 		<rt>this is the rt tag inside of a ruby tag</rt>
 		<rtc>this is the rtc tag inside of a ruby tag</rtc>
 		<rp>this is the rp tag inside of a ruby tag</rp>
-	</ruby
+	</ruby>
 
 	<footer>
 	    <p>this is not important and within a footer</p>
@@ -122,12 +125,13 @@
 		<source src="horse.ogg" type="audio/ogg">
 		<source src="horse.mp3" type="audio/mpeg">
 		Your browser does not support the audio element.
-  </audio>
+  	</audio>
   <p>
   	<strong>Note:</strong> This is an audio tag.
   </p>
 
-  <ul> This is a bdi tag.
+  <p>This is a bdi tag.</p>
+  <ul>
 	 <li>User <bdi>hrefs</bdi>: 60 points</li>
 	 <li>User <bdi>jdoe</bdi>: 80 points</li>
 	 <li>User <bdi>إيان</bdi>: 90 points</li>
@@ -188,17 +192,12 @@
 	=<output name="x" for="a b"></output>
   </form>
 
-</body>
+
   <nav>
   <form>
-
     <div class="homecontainer">
-
       <button formaction="./index.html">Home</button>
-
     </div>
-
   </form>
-
   </nav>
 </html>
