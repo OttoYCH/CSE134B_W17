@@ -1,0 +1,47 @@
+Tags Used:
+
+head
+title
+body
+div
+<p></p>
+<input type id>
+<script>
+form
+button
+meta content
+img
+h1
+label
+<span>
+h2
+table, td, th, tbody
+text area
+class
+href
+
+Tags NOT Used (some may not be tags because the site is terrible at organizing things):
+
+h3 h4 h5 h6
+blockquote
+a abbr area audio
+b bdi bdo br
+canvas cite code
+data datalist del dfn
+em embed
+i iframe ins
+kbd keygen
+map mark math meter
+noscript
+object output
+progress
+q
+ruby
+s samp select small strong sub sup svg
+template time
+u
+var video
+wbr
+
+dir lang style translate base link media type article section nav aside header footer address hr pre
+ol ul li dl dt dd figure figcaption main rb rt rtc rp param caption colgroup col tfoot option fieldset legend
