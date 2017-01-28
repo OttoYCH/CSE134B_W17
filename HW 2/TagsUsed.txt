@@ -20,11 +20,13 @@ text area
 class
 href
 thead
+audio
+bdi
+bdo
 
 Tags Remaining to test: 
 
-area audio
-bdi bdo
+area
 canvas
 data datalist
 embed
