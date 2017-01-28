@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Share with Freind</title>
+</head>
+<body>
+
+<div class="StorageList">
+	<button onclick="fetchList()">My Favorite</button>
+	<p id="demo"></p>
+	
+	<script>
+	function fetchList() {
+		document.getElementById("demo").innerHTML = "Searching My Favorite List...";
+	}
+	</script>
+</div>
+
+<div class="SelectFriends">
+	<form action="./EnterPhoneNumber.html" id="form1">
+		
+	</form>
+
+	<button type="submit" form="form1" value="Select Friends">Select Friends</button>
+</div>
+
+<div class="Back">
+	<form action="javascript:history.go(-1)"id="form2">
+		
+	</form>
+	<button type="submit" form="form2" value="BACK">Back</button>
+</div>
+
+</body>
+</html>

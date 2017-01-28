@@ -1,0 +1,41 @@
+Tags Used:
+
+head
+title
+body
+div
+<p></p>
+<input type id>
+<script>
+form
+button
+meta content
+img
+h1
+label
+<span>
+h2
+table, td, th, tbody
+text area
+class
+href
+thead
+
+Tags Remaining to test: 
+
+area audio
+bdi bdo
+canvas
+data datalist
+embed
+keygen
+map math meter
+noscript
+object output
+progress
+select
+template
+var video
+
+base link media address hr
+figure figcaption param caption colgroup col tfoot option fieldset legend

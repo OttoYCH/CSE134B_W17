@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Coffee Storage</title>
+</head>
+<body>
+
+	<div class="StorageList">
+		<p>Enter coffee title to search in my favorite list.</p>
+		<input type="search" id="myInput" onsearch="searchCoffee()">
+		
+		<p id="demo"></p>
+		
+		<script>
+		function searchCoffee() {
+			var coffee = document.getElementById("myInput");
+			document.getElementById("demo").innerHTML = "Searching for: " + coffee.value;
+		}
+		</script>
+	</div>
+
+	<div class="QuickCompare">
+		<form action="#" id="form1">
+			
+		</form>
+		
+		<button type="submit" form="form1" value="QuickCompare">Quick Compare</button>
+	</div>
+
+	<div class="Remove">
+		<form action="#" id="form2">
+			
+		</form>
+		<button type="submit" form="form2" value="Remove">Remove</button>
+	</div>
+
+	<form>
+		<button formaction="javascript:history.go(-1)">Back</button>
+	</form>
+
+
+</div>
+
+</body>
+</html>
