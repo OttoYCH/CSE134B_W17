@@ -67,8 +67,8 @@
 
 	<p>According to the spec, the wordbreak tag will add in wordbreak <wbr>opportunities<wbr> in certain areas.</p>
 
+	<p><b>Here are some lists</b></p>
 
-	<b>Here are some lists</b>
 	<ol>
   		<li>Have</li>
   		<li>a</li>
@@ -110,10 +110,14 @@
 	</pre>
 	
 	<p>Here is some ruby. It's used for languages like Chinese and Japanese.</p>
-	
-  <ruby>台<rb>灣</rb><rp>(</rp><rt>Tai</rt><rt>wan</rt><rp>)</rp></ruby>
-	<ruby>!<rp>: </rp><rt>Explosion</rt><rp>, </rp><rtc><rt lang=fr>Exo</rt></rtc>
-  </ruby>	
+
+	<ruby>
+		<rb>this is the rb tag inside of a ruby tag
+		<rt>this is the rt tag inside of a ruby tag
+		<rtc>this is the rtc tag inside of a ruby tag
+		<rp>this is the rp tag inside of a ruby tag
+	</ruby>
+
 
 	<footer>
 	    <p>this is not important and within a footer</p>
@@ -241,6 +245,7 @@
 	    <th>3</th>
 	  </tr>
 </tfoot>
+</table>
 
  <form>
 	 <fieldset>
@@ -251,7 +256,7 @@
  </form>
 
 <form>
-  <input list="browsers" name="browser">
+  <input list="datalist" name="browser">
   <datalist id="datalist">
 	  <option value="Datalist Tag">
 	  <option value="( ͡° ͜ʖ ͡°)">
@@ -300,7 +305,7 @@
     </div>
   </form>
   </nav>
-</br>
+
 
 </body>
 </html>
