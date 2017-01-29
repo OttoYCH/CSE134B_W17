@@ -51,13 +51,13 @@ option
 fieldset
 legend
 datalist
+video
+template
+base
 
 Tags Remaining to test: 
 
 area
 keygen
 map
-template
-video
-
-base link media   
+link 
