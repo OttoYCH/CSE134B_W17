@@ -54,10 +54,10 @@ datalist
 video
 template
 base
+keygen
+area
+map
 
 Tags Remaining to test: 
 
-area
-keygen
-map
 link 

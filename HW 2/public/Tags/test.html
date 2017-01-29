@@ -222,7 +222,7 @@
   <p>hr tag.</p>
 
   <figure>
-  <img src="house.png" alt="house">
+  <img src="./Tags/house.png" alt="house">
   <figcaption>These are tfoot and figure/figcaption tags...</figcaption>
   </figure>
 
@@ -272,17 +272,33 @@
 <template id="banana">
 </template>
 
-<p>this tag is below template with an id of "banana".</p>
+<p>This tag is below template with an id of "banana".</p>
 
 
+<p>This is <b>keygen</b> tag which specifies a key-pair generator field used for forms</p>
+<form action="./Tags/test.html" method="get">
+  Username: <input type="text" name="name">
+  Encryption: <keygen name="security">
+  <input type="submit">
+</form>
+
+
+<p>This is testing <b>map</b> and <b>area</b> tags</p>
+<p>Click on north America to see it closer</p>
+<img src="./Tags/north_america.gif" width="200" height="150" alt="north_america" usemap="#north_americamap">
+<map name="north_americamap">
+  <area shape="rect" coords="50,50,140,160" href="./Tags/usa.jpeg" alt="usa">
+
+</map>
 
 
   <br>
   <nav>
   <form>
     <div class="homecontainer">
-    	<a href="../index.html">Home</a>
+    	<a href="./index.html">Home</a>
     </div>
   </form>
   </nav>
+</br>
 </html>
