@@ -46,14 +46,18 @@ param
 caption 
 colgroup 
 col
+tfoot
+option
+fieldset
+legend
+datalist
 
 Tags Remaining to test: 
 
 area
-datalist
 keygen
 map
 template
 video
 
-base link media tfoot option fieldset legend
+base link media   

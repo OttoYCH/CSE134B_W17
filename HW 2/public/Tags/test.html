@@ -200,7 +200,7 @@
   <option value="this">This</option>
   <option value="is">is</option>
   <option value="a">a</option>
-  <option value="select">select</option>
+  <option value="select">select/option</option>
   <option value="tag">tag</option>
   </select><br>
 
@@ -222,7 +222,7 @@
 
   <figure>
   <img src="house.png" alt="house">
-  <figcaption>These are figure/figcaption tags...</figcaption>
+  <figcaption>These are tfoot and figure/figcaption tags...</figcaption>
   </figure>
 
   <table>
@@ -232,10 +232,34 @@
     <col style="background-color:yellow">
   </colgroup>
   <tr>
-    <th>1</th>
-    <th>2</th>
-    <th>3</th>
+	<th>-1</th>
+	<th>-2</th>
+	<th>-3</th>
   </tr>
+  <tfoot>
+	  <tr>
+	    <th>1</th>
+	    <th>2</th>
+	    <th>3</th>
+	  </tr>
+</tfoot>
+
+ <form>
+	 <fieldset>
+	  <legend>fieldset/legend tags:</legend>
+	  First Name: <input type="text"><br>
+	  Last Name: <input type="text">
+	 </fieldset>
+ </form>
+
+<form>
+  <input list="browsers" name="browser">
+  <datalist id="datalist">
+	  <option value="Datalist Tag">
+	  <option value="( ͡° ͜ʖ ͡°)">
+ </datalist>
+ <input type="submit">
+</form>
 
   <br>
   <nav>
