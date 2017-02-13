@@ -1,20 +1,27 @@
 <!DOCTYPE HTML>
 <html>
   <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
     <title>Search for Coffee</title>
   </head>
-  <form>
-  	<div class="randomcontainer">
-      <input type="text" placeholder="Enter coffee..." id="coffee">
-      <button type="submit">Search...</button>
+  <body>
+    <div class="container">
+      <form>
+      	<div class="randomcontainer">
+          <input type="text" placeholder="Enter coffee..." id="coffee">
+          <button type="submit">Search...</button>
+        </div>
+
+    	<div class="randomcontainer">
+          <button formaction="./coffee_hunter.html">Random Coffee</button>
+    	</div>
+
+    	<div class="backcontainer">
+    		<button formaction="javascript:history.go(-1)">Back</button>
+    	</div>
+      </form>
     </div>
-
-	<div class="randomcontainer">
-      <button formaction="./coffee_hunter.html">Random Coffee</button>
-	</div>
-
-	<div class="backcontainer">
-		<button formaction="javascript:history.go(-1)">Back</button>
-	</div>
-  </form>
+  </body>
 </html>
