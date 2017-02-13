@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>Coffee-Dex</title> 
+  </head>
+  <form>
+    <div class="imgcontainer">
+      <img src="coffee_cup.png" width="100" height="150" alt="Coffee Cup" id="coffeeimg"> 
+    </div>
+
+    <div class="infocontainer">
+      <label><b>Brew Name</b></label>
+      <input type="text" value="Americano" id="brew" disabled>
+
+      <label><b>Hot</b></label>
+      <input type="text" value="Yes" id="hot" disabled>
+
+      <label><b>Price</b></label>
+      <input type="text" value="$2.95" id="price" disabled>
+
+      <label><b>Shop Location</b> <a href="#">Search on the map</a></label>
+      <input type="text" value="9500 gilman Dr, La Jolla, CA 92093" id="location" disabled>
+
+      <label><b>Rating</b></label>
+      <input type="range" id="rating">
+
+      <label><b>Order Link</b></label>
+      <input type="url" value="http://www.ucsdcoffee.com/order" id="link" disabled>
+
+      <label><b>Note</b></label>
+      <textarea rows="10" cols="100" id="note"></textarea>
+    </div>
+
+    <div class="ordercontainer">
+      <button>Order</button>
+    </div>
+
+    <div class="addcontainer">
+      <button type="submit">Add</button>
+      <button formaction="javascript:history.go(-1)">Back</button>
+    </div>
+  </form>
+</html>
