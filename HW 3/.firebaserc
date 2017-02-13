@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "coffee-dex",
+    "s": "coffee-dex-a7a8d",
+    "staging": "coffee-dex-a7a8d"
+  }
+}
