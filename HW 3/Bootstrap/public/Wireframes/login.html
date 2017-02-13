@@ -2,29 +2,35 @@
 <html>
   <head> 
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
     <title>Coffee-Dex</title> 
   </head>
-  <form>
-    <div class="imgcontainer">
-      <img src="login_coffee.png" alt="Login Coffee" id="loginimg"> 
-      <h1>Coffee-Dex</h1>
-    </div>
-
-    <div class="upasscontainer">
-      <label><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" id="uname" required>
-
-      <label><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" id="pswd" required>
-    </div>
-    
-    <div class="logincontainer">
-      <button type="submit" formaction="./main_page.html">Login</button>
-      <input type="checkbox" checked="checked"> Remember me
-    </div>
-
+  <body>
     <div class="container">
-      <span class="psw"> <a href="./reset_password.html">Forgot password?</a></span>
+      <form>
+        <div class="imgcontainer">
+          <img src="login_coffee.png" alt="Login Coffee" id="loginimg"> 
+          <h1>Coffee-Dex</h1>
+        </div>
+
+        <div class="upasscontainer">
+          <label><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" id="uname" required>
+
+          <label><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" id="pswd" required>
+        </div>
+        
+        <div class="logincontainer">
+          <button type="submit" formaction="./main_page.html">Login</button>
+          <input type="checkbox" checked="checked"> Remember me
+        </div>
+
+        <div class="container">
+          <span class="psw"> <a href="./reset_password.html">Forgot password?</a></span>
+        </div>
+      </form>
     </div>
-  </form>
+  </body>
 </html>
