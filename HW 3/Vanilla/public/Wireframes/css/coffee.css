@@ -116,3 +116,8 @@ body {
 	font-family:Courier;
 
 }
+
+#logout_page body {
+
+	background-color: white;
+}
