@@ -2,16 +2,17 @@
 <html>
   <head> 
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <link rel="stylesheet" type="text/css" href="./css/coffee.css">
     <title>Coffee-Dex</title> 
   </head>
   <form>
-    <div class="messagecontainer">
+    <div class="logout_message_container">
       <p>Do you want to logout?</p>
     </div>
 
     <div class="logoutcontainer">
-      <button formaction="./login.html">Yes</button>
-      <button formaction="javascript:history.go(-1)">No</button>
+      <button class="button buttonYes" formaction="./login.html">Yes</button>
+      <button class="button buttonNo" formaction="javascript:history.go(-1)">No</button>
     </div>
   </form>
 </html>

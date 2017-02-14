@@ -88,3 +88,31 @@ body {
 	font-family: "Comic Sans MS";
 	color: #994C00;
 }
+
+.buttonYes {
+	width: 75px;
+	height: 40px;
+	text-align: center;
+	background-color: #00FF00;
+	font-size: 16px;
+	font-family:Courier;
+	color: white;
+}
+
+.buttonNo {
+	width: 75px;
+	height: 40px;
+	text-align: center;
+	background-color: #FF0000;
+	font-size: 16px;
+	font-family:Courier;
+	color: white;
+}
+
+.logout_message_container {
+	text-align: center;
+	width: 150px;
+	height: 50px;
+	font-family:Courier;
+
+}
