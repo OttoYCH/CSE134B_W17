@@ -2,19 +2,24 @@
 <html>
   <head> 
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <link rel="stylesheet" type="text/css" href="./css/coffee.css">
     <title>Coffee-Dex</title> 
   </head>
+
+  <body> 
+    <div class="loginPage">
   <form>
-    <div class="imgcontainer">
+    
+    <div class="loginimg_container">
       <img src="login_coffee.png" alt="Login Coffee" id="loginimg"> 
       <h1>Coffee-Dex</h1>
     </div>
 
     <div class="upasscontainer">
-      <label><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" id="uname" required>
+      <label>Username</label>
+      <input type="text" placeholder="Enter Username" id="uname" required><br />
 
-      <label><b>Password</b></label>
+      <label>Password</label>
       <input type="password" placeholder="Enter Password" id="pswd" required>
     </div>
     
@@ -23,8 +28,10 @@
       <input type="checkbox" checked="checked"> Remember me
     </div>
 
-    <div class="container">
+    <div class="forgetpw_container">
       <span class="psw"> <a href="./reset_password.html">Forgot password?</a></span>
     </div>
   </form>
+  </div>
+</body>
 </html>

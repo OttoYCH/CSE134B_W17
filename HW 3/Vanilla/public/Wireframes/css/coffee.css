@@ -1,6 +1,6 @@
-/* Set all the background to lightgreen */
+/* This is body for all pages */
 body {
-	background-color: rgb(149, 255, 140);
+	background-color: rgb(255, 255, 255);
 }
 
 .wireframe h1  {
@@ -87,4 +87,33 @@ body {
 	font-weight: bold;
 	font-family: "Comic Sans MS";
 	color: #994C00;
+}
+
+.loginPage {
+	width: 250px;
+	height: 100px;	
+}
+
+.loginimg_container {
+	margin: 5px;
+	padding: 20px 20px;
+}
+
+.loginimg_container img {
+	width: 40%;
+	height: auto;
+}
+
+.loginimg_container h1 {
+	position: bottom;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: "Comic Sans MS";
+	color: #994C00;
+}
+
+.upasscontainer {
+	border: 1px solid;
+	border-radius: 4px;
+	z-index: 2;
 }
