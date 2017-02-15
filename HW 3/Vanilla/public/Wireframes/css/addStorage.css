@@ -1,0 +1,30 @@
+.buttonConfirm {
+	width: 75px;
+	height: 40px;
+	text-align: center;
+	background-color: #00FF00;
+	font-size: 16px;
+	font-family: Courier;
+	color: white;
+}
+
+.buttonDeconfirm {
+	width: 75px;
+	height: 40px;
+	text-align: center;
+	background-color: #FF0000;
+	font-size: 16px;
+	font-family: Courier;
+	color: white;
+}
+
+.message_container {
+	text-align: center;
+	font-size: 16px;
+	font-family: Courier;
+	color: grey;
+}
+
+.button_container {
+	text-align: center;
+}
