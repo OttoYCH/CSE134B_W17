@@ -95,28 +95,110 @@ body {
 }
 
 .loginimg_container {
-	margin: 5px;
-	padding: 20px 20px;
+	width: 180px;
+	height: 100px;
 }
 
 .loginimg_container img {
-	width: 40%;
+	width: 80%;
 	height: auto;
 }
 
 .loginimg_container h1 {
-	position: bottom;
+	position: relative;
+	left: 25px;
 	font-size: 16px;
 	font-weight: bold;
 	font-family: "Comic Sans MS";
 	color: #994C00;
 }
 
-.upasscontainer {
+.usernamecontainer {
+	position: absolute;
+	top: 40px;
+	left: 180px;
+	/*width: 180px;
+	height: 40px;
 	border: 1px solid;
-	border-radius: 4px;
-	z-index: 2;
+	border-radius: 3px;
+	z-index: 1;*/
+	font-family: "Comic Sans MS";
+	font-size: 12px;
 }
+
+.usernamecontainer label {
+	text-align: right;
+	clear: both;
+	float: left;
+	margin-right: 15px;
+}
+
+.usernamecontainer input {
+	float: left;
+	height:15px;
+	width: 160px;
+	border-radius: 3px;
+}
+
+.passwordcontainer {
+	position: absolute;
+	top: 80px;
+	left: 183px;
+	/*width: 180px;
+	height: 40px;
+	border: 1px solid;
+	border-radius: 3px;
+	z-index: 1;*/
+	font-family: "Comic Sans MS";
+	font-size: 12px;
+}
+
+.passwordcontainer label {
+	text-align: right;
+	clear: both;
+	float: left;
+	margin-right: 15px;
+}
+
+.passwordcontainer input {
+	float: left;
+	height:15px;
+	width: 160px;
+	border-radius: 3px;
+}
+
+.logincontainer {
+	position: absolute;
+	top: 120px;
+	left: 180px;
+	font-family: "Comic Sans MS";
+	font-size: 11px;
+}
+
+.logincontainer button {
+	position: absolute;
+	top: 0px;
+	left: 160px;
+	width: 70px;
+	height: 30px;
+	background-color: #00CC00; 
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.forgetpw_container {
+	position: absolute;
+	top: 140px;
+	left: 180px;
+	font-family: "Comic Sans MS";
+	font-size: 11px;
+}
+
 .buttonYes {
 	width: 75px;
 	height: 40px;
