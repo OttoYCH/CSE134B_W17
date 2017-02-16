@@ -2,20 +2,24 @@
 	width: 75px;
 	height: 40px;
 	text-align: center;
-	background-color: #00FF00;
+	background-color: #58B957;
+	border-radius: 4px;
 	font-size: 16px;
-	font-family: Courier;
+	font-family:Helvetica;
 	color: white;
+	border:none;
 }
 
 .buttonNo {
 	width: 75px;
 	height: 40px;
 	text-align: center;
-	background-color: #FF0000;
+	background-color: #DB524C;
+	border-radius: 4px;
 	font-size: 16px;
-	font-family: Courier;
+	font-family:Helvetica;
 	color: white;
+	border:none;
 }
 
 .logout_message_container {
