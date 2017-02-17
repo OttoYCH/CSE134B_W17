@@ -1,32 +1,30 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.css" rel="stylesheet">
 	<title>Enter Phone Number</title>
 </head>
 <body>
 
-<div class="phonenumber">
-	<h1>Enter the phone number</h1>
+<div class="container-fluid">
+	<h1 class="h2 text-primary">Enter the phone number</h1>
 	
-	<img src="phone.png" alt="Enter phone number" width="36" height="36">
-
-	<input type="text" placeholder="Phonenumber" id="phonenumber" required>
-
-	<button>Mobile</button>
+	<div class="form-group">
+	<img class="img" src="phone.png" alt="Enter phone number" width="36" height="36">
+	
+	<input class="input" type="text" placeholder="Phonenumber" id="phonenumber" required>
+	</div>
+	<button class="btn btn-info">Mobile</button>
 
 </div>
+	<br />
+	
+	<button onclick="location.href = './ShareWithFriends.html';" class="btn btn-success button">Send</button>
 
-<div class="sendcontainer">
-	<button>Send</button>
-</div>
-
-<div class="cancelcontainer">
-	<form action="./ShareWithFriends.html" id="form1">
-		
-	</form>
-
-	<button type="submit" form="form1" value="Cancel">Cancel</button>
-</div>
+	<button onclick="location.href = './ShareWithFriends.html';" class="btn btn-warning button">Cancel</button>
+	
 
 </body>
 </html>
