@@ -11,14 +11,16 @@ body {
 }
 
 .mainPage_container {
-
 	background-color: #DAE8FC;
-	width: 150px;
-	height: 250px;
-	border: 5px double #6C8EBF;
+	width: 40vw;
+	height: 40vh;
 	border-radius: 8px;
 	padding: 35px 30px;
-	margin: 0px;
+	margin: 12px;
+	border: 6px double #6C8EBF;
+	position: absolute;
+	top: 15vh;
+	left: 16vw;
 }
 
 #searchCoffee {
@@ -36,6 +38,9 @@ body {
 	font-weight: bold;
 	font-family: "Comic Sans MS";
 	color: #994C00;
+	position: absolute;
+	top: 8vh;
+	left: 8.5vw;
 }
 
 #coffeeStorage {
@@ -53,6 +58,9 @@ body {
 	font-weight: bold;
 	font-family: "Comic Sans MS";
 	color: #994C00;
+	position: absolute;
+	top: 18vh;
+	left: 8.5vw;
 }
 
 #shareFriend {
@@ -70,6 +78,9 @@ body {
 	font-weight: bold;
 	font-family: "Comic Sans MS";
 	color: #994C00;
+	position: absolute;
+	top: 28vh;
+	left: 8.5vw;
 }
 
 #logout {
@@ -87,6 +98,9 @@ body {
 	font-weight: bold;
 	font-family: "Comic Sans MS";
 	color: #994C00;
+	position: absolute;
+	top: 38vh;
+	left: 8.5vw;
 }
 
 .loginPage {
