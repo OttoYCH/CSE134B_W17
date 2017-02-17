@@ -12,12 +12,9 @@ body {
 
 .mainPage_container {
 	background-color: #DAE8FC;
-	/*  width: 160px;
-	height: 230px;*/
 	width: 40vw;
 	height: 60vw;
 	border-radius: 4vw;
-	/*padding: 35px 30px;*/
 	padding: 5vw 5vh;
 	margin: 6vw;
 	border: 2vw double #6C8EBF;
@@ -47,10 +44,6 @@ body {
 }
 
 #coffeeStorage {
-	/*width: 160px;
-	height:50px;*/
-	/*width: 40vw;
-	height: 8vh;*/
 	width: 100%;
 	height: 20%;
 	background: url(../coffeeBean.png) no-repeat scroll 2px 3px;
@@ -71,10 +64,6 @@ body {
 }
 
 #shareFriend {
-	/*width: 160px;
-	height:50px;*/
-	/*width: 40vw;
-	height: 8vh;*/
 	width: 100%;
 	height: 20%;
 	background: url(../coffeeBean.png) no-repeat scroll 2px 3px;
@@ -95,10 +84,6 @@ body {
 }
 
 #logout {
-	/*width: 160px;
-	height:50px;*/
-	/*width: 40vw;
-	height: 8vh;*/
 	width: 100%;
 	height: 20%;
 	background: url(../coffeeBean.png) no-repeat scroll 2px 3px;
@@ -118,103 +103,86 @@ body {
 	left: 2vw;
 }
 
-.loginPage {
-	width: 250px;
-	height: 100px;	
-}
-
 .loginimg_container {
-	width: 180px;
-	height: 100px;
+	position: absolute;
+	top: 28%;
+	left:20%;	
 }
 
 .loginimg_container img {
-	width: 80%;
-	height: auto;
+	width: 15vw;
+	height: 22vh;
 }
 
 .loginimg_container h1 {
-	position: relative;
-	left: 25px;
-	font-size: 16px;
+	font-size: 2vw;
 	font-weight: bold;
 	font-family: "Comic Sans MS";
 	color: #994C00;
 }
 
-.usernamecontainer {
+.logininfo {
 	position: absolute;
-	top: 40px;
-	left: 180px;
-	/*width: 180px;
-	height: 40px;
-	border: 1px solid;
-	border-radius: 3px;
-	z-index: 1;*/
+	top: 35%;
+	left: 35%;
+}
+
+.usernamecontainer {
+	position: relative;
 	font-family: "Comic Sans MS";
-	font-size: 12px;
+	font-size: 2vw;
 }
 
 .usernamecontainer label {
-	text-align: right;
 	clear: both;
 	float: left;
-	margin-right: 15px;
+	margin-right: 2vw;
 }
 
 .usernamecontainer input {
 	float: left;
-	height:15px;
-	width: 160px;
-	border-radius: 3px;
+	height:2vw;
+	border-radius: 1vw;
 }
 
 .passwordcontainer {
-	position: absolute;
-	top: 80px;
-	left: 183px;
-	/*width: 180px;
-	height: 40px;
-	border: 1px solid;
-	border-radius: 3px;
-	z-index: 1;*/
+	position: relative;
 	font-family: "Comic Sans MS";
-	font-size: 12px;
+	font-size: 2vw;
+	left: 3px;
 }
 
 .passwordcontainer label {
-	text-align: right;
 	clear: both;
 	float: left;
-	margin-right: 15px;
+	margin-right: 2vw;
 }
 
 .passwordcontainer input {
 	float: left;
-	height:15px;
-	width: 160px;
-	border-radius: 3px;
+	height:2vw;
+	border-radius: 1vw;
 }
 
 .logincontainer {
 	position: absolute;
-	top: 120px;
-	left: 180px;
+	top: 150%;
+	left: 5%;
 	font-family: "Comic Sans MS";
-	font-size: 11px;
+	font-size: 2vh;
 }
 
 .logincontainer button {
 	position: absolute;
 	top: 0px;
-	left: 160px;
-	width: 70px;
-	height: 30px;
+	left: 120%;
+	width: 10vw;
+	height: 5vh;
 	background-color: #00CC00; 
     border: none;
     color: white;
     text-align: center;
-    font-size: 13px;
+    font-size: 2vh;
     font-family: "Comic Sans MS";
     font-weight: bold;
     border-radius: 4px;
@@ -222,10 +190,10 @@ body {
 
 .forgetpw_container {
 	position: absolute;
-	top: 140px;
-	left: 180px;
+	top: 200%;
+	left: 5%;
 	font-family: "Comic Sans MS";
-	font-size: 11px;
+	font-size: 2vh;
 }
 
 /*
