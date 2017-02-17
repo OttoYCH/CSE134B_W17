@@ -8,16 +8,17 @@
   </head>
   <body>
     <div class="container">
-      <form>
-        <div class="text-center">
-          <p>Do you want to logout?</p>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title text-center">Do you want to logout?</h3>
         </div>
-
-        <div class="d-inline-block bg-warning text-center">
-          <button formaction="./login.html" class="btn btn-success">Yes</button>
-          <button formaction="javascript:history.go(-1)" class="btn btn-warning">No</button>
+        <div class="panel-body">
+          <div class="d-inline-block text-center">
+            <button formaction="./login.html" class="btn btn-success">Yes</button>
+            <button formaction="javascript:history.go(-1)" class="btn btn-warning">No</button>
+          </div>
         </div>
-      </form>
+      </div>
     </div>
   </body>
 </html>
