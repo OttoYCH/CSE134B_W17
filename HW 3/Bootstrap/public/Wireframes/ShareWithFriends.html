@@ -7,31 +7,33 @@
 		<title>Share with Freind</title>
 	</head>
 	<body>
-		<div class="container">
-			<div class="StorageList">
-				<button onclick="fetchList()">My Favorite</button>
-				<p id="demo"></p>
+		<div class="d-inline-block bg-warning">
+			<div class="glyphicon-search">
+				<button class="btn-info badge" onclick="fetchList()">My Favorite</button>
+				
+				
+					<p id="demo">
+						
+					</p>
+					
 				
 				<script>
 				function fetchList() {
 					document.getElementById("demo").innerHTML = "Searching My Favorite List...";
 				}
 				</script>
+				
+			</div>
+		
+			<div class="panel-body">
+				
+				<button onclick="location.href = './EnterPhoneNumber.html';" class="btn btn-info">Select Friends</button>
+				
 			</div>
 
-			<div class="SelectFriends">
-				<form action="./EnterPhoneNumber.html" id="form1">
-					
-				</form>
-
-				<button type="submit" form="form1" value="Select Friends">Select Friends</button>
-			</div>
-
-			<div class="Back">
-				<form action="./main_page.html" id="form2">
-					
-				</form>
-				<button type="submit" form="form2" value="BACK">Back</button>
+			<div class="panel-body">
+				
+				<button onclick="location.href = './main_page.html';" class="btn btn-warning">Back</button>
 			</div>
 		</div>
 	</body>
