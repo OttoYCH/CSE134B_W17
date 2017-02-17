@@ -12,20 +12,25 @@ body {
 
 .mainPage_container {
 	background-color: #DAE8FC;
+	/*  width: 160px;
+	height: 230px;*/
 	width: 40vw;
-	height: 40vh;
-	border-radius: 8px;
-	padding: 35px 30px;
-	margin: 12px;
-	border: 6px double #6C8EBF;
-	position: absolute;
+	height: 60vw;
+	border-radius: 4vw;
+	/*padding: 35px 30px;*/
+	padding: 5vw 5vh;
+	margin: 6vw;
+	border: 2vw double #6C8EBF;
+	position: relative;
 	top: 15vh;
-	left: 16vw;
+	left: 15vw;
 }
 
 #searchCoffee {
-	width: 160px;
-	height:50px;
+	/*width: 160px;
+	height:50px;*/
+	width: 40vw;
+	height: 8vh;
 	background: url(../coffeeBean.png) no-repeat scroll 2px 3px;
 	background-size: 20px;
 	background-position: 12px;
@@ -38,14 +43,16 @@ body {
 	font-weight: bold;
 	font-family: "Comic Sans MS";
 	color: #994C00;
-	position: absolute;
-	top: 8vh;
-	left: 8.5vw;
+	position: relative;
+	top: 2vh;
+	left: 2vw;
 }
 
 #coffeeStorage {
-	width: 160px;
-	height:50px;
+	/*width: 160px;
+	height:50px;*/
+	width: 40vw;
+	height: 8vh;
 	background: url(../coffeeBean.png) no-repeat scroll 2px 3px;
 	background-size: 20px;
 	background-position: 12px;
@@ -58,14 +65,16 @@ body {
 	font-weight: bold;
 	font-family: "Comic Sans MS";
 	color: #994C00;
-	position: absolute;
-	top: 18vh;
-	left: 8.5vw;
+	position: relative;
+	top: 6vh;
+	left: 2vw;
 }
 
 #shareFriend {
-	width: 160px;
-	height:50px;
+	/*width: 160px;
+	height:50px;*/
+	width: 40vw;
+	height: 8vh;
 	background: url(../coffeeBean.png) no-repeat scroll 2px 3px;
 	background-size: 20px;
 	background-position: 12px;
@@ -78,14 +87,16 @@ body {
 	font-weight: bold;
 	font-family: "Comic Sans MS";
 	color: #994C00;
-	position: absolute;
-	top: 28vh;
-	left: 8.5vw;
+	position: relative;
+	top: 10vh;
+	left: 2vw;
 }
 
 #logout {
-	width: 160px;
-	height:50px;
+	/*width: 160px;
+	height:50px;*/
+	width: 40vw;
+	height: 8vh;
 	background: url(../coffeeBean.png) no-repeat scroll 2px 3px;
 	background-size: 20px;
 	background-position: 12px;
@@ -98,9 +109,9 @@ body {
 	font-weight: bold;
 	font-family: "Comic Sans MS";
 	color: #994C00;
-	position: absolute;
-	top: 38vh;
-	left: 8.5vw;
+	position: relative;
+	top: 14vh;
+	left: 2vw;
 }
 
 .loginPage {
