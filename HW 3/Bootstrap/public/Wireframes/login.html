@@ -8,26 +8,30 @@
   </head>
   <body>
     <div class="container">
-      <form>
-        <div class="imgcontainer">
+      <form class="form-control-static">
+        <div class="glyphicon-chevron-left">
           <img src="login_coffee.png" alt="Login Coffee" id="loginimg"> 
+        </div>  
+        <div class="glyphicon sup">  
           <h1>Coffee-Dex</h1>
         </div>
 
-        <div class="upasscontainer">
-          <label><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" id="uname" required>
+        <div class="form-group">
+          <label>Username</label>
+          <input class ="input" type="text" placeholder="Enter Username" id="uname" required>
 
-          <label><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" id="pswd" required>
+          <label>Password</label>
+          <input class="input" type="password" placeholder="Enter Password" id="pswd" required>
         </div>
         
-        <div class="logincontainer">
-          <button type="submit" formaction="./main_page.html">Login</button>
-          <input type="checkbox" checked="checked"> Remember me
+        <div class="loginbtn">
+          <button class="btn-success" type="submit" formaction="./main_page.html">Login</button>
+          
         </div>
-
-        <div class="container">
+        <div class="checkbox-inline ppoglyphicon">
+        <input type="checkbox" checked="checked"> Remember me
+        </div>
+        <div class="container radio">
           <span class="psw"> <a href="./reset_password.html">Forgot password?</a></span>
         </div>
       </form>
