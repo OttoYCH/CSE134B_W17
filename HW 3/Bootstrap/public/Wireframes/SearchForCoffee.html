@@ -9,18 +9,22 @@
   <body>
     <div class="container">
       <form>
-      	<div class="randomcontainer">
-          <input type="text" placeholder="Enter coffee..." id="coffee">
-          <button type="submit">Search...</button>
+      	<div class="randomcontainer input-group">
+          <input type="text" class="form-control" placeholder="Enter coffee..." id="coffee">
+          <span class="input-group-btn">
+            <button type="submit" class="btn btn-warning">
+              <span class="glyphicon glyphicon-search"></span> Search 
+            </button>
+          </span>  
         </div>
-
-    	<div class="randomcontainer">
-          <button formaction="./coffee_hunter.html">Random Coffee</button>
-    	</div>
-
-    	<div class="backcontainer">
-    		<button formaction="javascript:history.go(-1)">Back</button>
-    	</div>
+        <br/>
+        <div class="randomcontainer text-center">
+            <button formaction="./coffee_hunter.html" class="btn btn-warning">Random Coffee</button>
+        </div>
+      
+        <div class="backcontainer text-right">
+          <button formaction="javascript:history.go(-1)" class="btn btn-warning">Back</button>
+        </div>
       </form>
     </div>
   </body>
