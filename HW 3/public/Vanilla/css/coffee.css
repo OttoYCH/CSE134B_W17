@@ -481,3 +481,40 @@ tr {
 	top: 30%;
 	left: 12%
 }
+
+.phonenumber {
+	width: 90vw;
+	height: 40vh;
+	position: absolute;
+	top:25%;
+	left:5%;
+}
+
+.phonenumber h1 {
+	color:#6F4E37;
+	font-size:3vw;
+	font-family:Courier;
+	font-weight:bold;
+	
+}
+
+.phonenumber input {
+	height:2vh;
+	border-radius: 1vw;
+}
+
+.mobile {
+	background-color:#EEEEEE;
+}
+
+.sendBtn {
+    background-color: #58B957;
+    border-radius: 1vh;
+    color: white;
+}
+
+.cancelBtn {
+    background-color: #DB524C;
+    border-radius: 1vh;
+    color: white;
+}

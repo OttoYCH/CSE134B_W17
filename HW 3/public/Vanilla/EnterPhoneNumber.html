@@ -1,6 +1,9 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <link rel="stylesheet" type="text/css" href="./css/coffee.css">
 	<title>Enter Phone Number</title>
 </head>
 <body>
@@ -8,24 +11,15 @@
 <div class="phonenumber">
 	<h1>Enter the phone number</h1>
 	
-	<img src="phone.png" alt="Enter phone number" width="36" height="36">
+	<img src="phone.png" alt="Enter phone number" width="32" height="32">
 
 	<input type="text" placeholder="Phonenumber" id="phonenumber" required>
 
-	<button>Mobile</button>
+	<button class="mobile">Mobile</button>
 
-</div>
+	<button class="sendBtn">Send</button>
 
-<div class="sendcontainer">
-	<button>Send</button>
-</div>
-
-<div class="cancelcontainer">
-	<form action="./ShareWithFriends.html" id="form1">
-		
-	</form>
-
-	<button type="submit" form="form1" value="Cancel">Cancel</button>
+	<button onclick="location.href ='./ShareWithFriends.html';" class="cancelBtn">Cancel</button>
 </div>
 
 </body>
