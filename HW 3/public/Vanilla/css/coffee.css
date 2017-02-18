@@ -595,7 +595,7 @@ tr {
 }
 
 .StorageList p {
-	font-size: 3vw;
+	font-size: 5vw;
 	font-family: Courier;
 	color:#DB524C;
 	font-weight:bold;
@@ -618,7 +618,7 @@ tr {
 }
 
 .removeBtn {
-	background-color:#008CFF;
+    background-color:#FF0000;
     border-radius: 1vh;
     color: white;
     font-weight:bold;
@@ -710,4 +710,9 @@ tr {
 .center_button {
 	text-align: center;
 	top: 40%;
+}
+
+.bigger_text {
+	font_size: 6vw;
+
 }
