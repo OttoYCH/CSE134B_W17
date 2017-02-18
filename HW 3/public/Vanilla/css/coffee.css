@@ -518,3 +518,29 @@ tr {
     border-radius: 1vh;
     color: white;
 }
+
+.uemailcontainer {
+	position: absolute;
+	top:40%;
+	left:5%;
+}
+
+.uemailcontainer label {
+	font-size: 3vw;
+	font-family:Courier;
+	font-weight: bold;
+	color:lightblue;
+}
+
+.uemailcontainer input[type="text"] {
+	border: solid 2px #lightgreen;
+  	box-shadow: 0 0 5px 1px lightblue;
+}
+
+.resetpw {
+    background-color: #fffacd;
+    border-radius: 1vh;
+    color: red;
+    font-family: Courier;
+    font-weight:bold;
+}
