@@ -638,6 +638,39 @@ tr {
 	display: block;
 }
 
+.infocontainer button {
+	background-color: #3079ED; 
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 2vh;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.addbutton {
+	background-color: #00CC00; 
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 2vh;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.backbutton {
+	background-color: none; 
+    border: none;
+    color: #994C00;
+    text-align: center;
+    font-size: 2vh;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    border-radius: 4px;
+}
+
 .infocontainer label {
 	font-weight: bold;
 	font-size: 5vw;

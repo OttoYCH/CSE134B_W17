@@ -14,15 +14,15 @@
 
       <div class="infocontainer">
         <div style="float:left;margin-right:5%;">
-          <label for="name">Brew</label>
+          <label for="name">Brew:</label>
           <input class="small-input" id="name" type="text" name="name" value="Americano" disabled>
         </div>
         <div style="float:left;margin-right:5%;">
-          <label for="served">Served</label>
+          <label for="served">Served:</label>
           <input class="small-input" id="served" type="text" name="served" value="Hot" disabled>
         </div>
         <div style="float:left;">
-          <label for="price">Price</label>
+          <label for="price">Price:</label>
           <input class="small-input" id="price" type="text" name="price" value="$2.95" disabled>
         </div>
         <br/> <br/> <br/>
@@ -30,23 +30,20 @@
           <a href="#">Search Maps!</a> <img src="maps.png" width="15" height="15" alt="Maps" id="mapimg">
         </label>
         <input type="text" class="large-input" value="9500 gilman Dr, La Jolla, CA 92093" id="location" disabled>
-        <br>
+        <br/> 
         <label style="float:left;"> Rating: </label>
         <input type="range" id="rating">
-        <label><b>Order Link:</b></label>
+        <br/>
+        <label>Order Link: <button>Order</button></label>
         <input type="url" class="large-input" value="http://www.ucsdcoffee.com/order" id="link" disabled>
         <br>
         <label><b>Notes:</b></label>
         <textarea class="notes-textarea" rows="5" id="note"></textarea>
       </div>
 
-      <div class="ordercontainer">
-        <button>Order</button>
-      </div>
-
       <div class="addcontainer">
-        <button type="submit" formaction="./add.html" class="btn btn-success" type="submit">Add</button>
-        <button formaction="javascript:history.go(-1)">Back</button>
+        <button type="submit" formaction="./add.html" class="addbutton" type="submit">Add</button>
+        <button formaction="javascript:history.go(-1)" class="backbutton">Back</button>
       </div>
     </form>
   </div>
