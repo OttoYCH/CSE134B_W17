@@ -384,3 +384,28 @@ tr {
 	top: 50vh;
 	left: 45vw;
 }
+
+.QPcontainer {
+	position: absolute;
+
+	top: 30%;
+	left: 5%;
+}
+
+.QPcontainer tr {
+	background-color: #97D077;
+	color: #994C00;
+}
+
+.QPDone {
+	position: absolute;
+	top: 55%;
+	left: 13%;
+	width: 12vw;
+	height: 8vw;
+	background-color: #3D8BCD;
+	border-radius: 2px;
+	font-size: 2vw;
+	font-family:Courier;
+	color: white;
+}
