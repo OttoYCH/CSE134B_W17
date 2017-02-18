@@ -279,5 +279,71 @@ body {
 	color: grey;
 }
 
+.OrderDetail {
+	position: absolute;
+	top: 5%;
+	left: 18%;
+	color:red;
+	font-family: Courier;
+	font-size: 2vh;
+}
 
+table {
+	border-collapse: collapse;
+}
 
+table, th, td {
+	border: 1px solid black;
+	padding: 5px;
+	text-align: center;
+}
+
+tr:hover {background-color: red}
+
+tr {
+	background-color: #455FFF;
+    color: white;	
+}
+
+.QuickView table {
+	position: absolute;
+	top: 15%;
+	left:15%;
+}
+
+.orderimg {
+	position:absolute;
+	top: 50%;
+	left: 15%;
+}
+
+.orderimg img {
+	width: 10vw;
+	height: 10vw;
+}
+
+.orderYes {
+	position: absolute;
+	width: 15vw;
+	height: 8vh;
+	text-align: center;
+	background-color: #58B957;
+	font-size: 2vw;
+	font-family:Courier;
+	color: white;
+	top: 50vh;
+	left: 28vw;
+}
+
+.orderNo {
+	position: absolute;
+	width: 15vw;
+	height: 8vh;
+	text-align: center;
+	background-color: #DB524C;
+	font-size: 2vw;
+	font-family:Courier;
+	color: white;
+	top: 50vh;
+	left: 45vw;
+}

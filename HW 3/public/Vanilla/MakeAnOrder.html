@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
-  <head> 
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="./css/coffee.css"> 
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <title>Make an Order</title> 
   </head>
-  <form>
+  
     <!-- TODO: get actual values of order detail - http://stackoverflow.com/questions/6957917/how-to-get-html-to-print-return-value-of-javascript-function -->
     <div class="OrderDetail">
     <h1>Your Order Detail</h1>
@@ -26,12 +28,7 @@
         <th>Type</th>
         <th>Hot</th>
       </tr>
-    </table>
 
-  </div>
-
-  <div class="Nutrition">
-    <table>
       <tr>
         <th>Calories</th>
         <th>120</th>
@@ -48,14 +45,19 @@
         <th>Caffeine</th>
         <th>130 mg</th>
       </tr>
-      </table>
-  <img src="/cappuccino" alt="Order image" id="orderimg">
-    
+    </table>
+
   </div>
 
-    <div class="confirmcontainer">
-      <button type="submit">Confirm</button>
-      <button>Cancel</button>
+  
+  <div class="orderimg">    
+  <img src="cappuccino.png" alt="Order image" id="orderimg">
+  </div>  
+  
+
+    <div class="OrderButton">
+      <button onclick="location.href ='./main_page.html';" class="orderYes">Confirm</button>
+      <button onclick="location.href ='./main_page.html';" class="orderNo">Cancel</button>
     </div>
-  </form>
+  
 </html>
