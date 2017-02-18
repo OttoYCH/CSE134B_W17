@@ -548,6 +548,7 @@ tr {
     background-color: #fffacd;
     border-radius: 1vh;
     color: red;
+    font-size: 6vw;
     font-family: Courier;
     font-weight:bold;
 }
@@ -685,4 +686,17 @@ tr {
 
 .hyperlink {
 	width: 330px;
+}
+
+.reset_password {
+	font-size: 8vw;
+}
+
+.center_reset {
+	text-align: center;
+}
+
+.center_button {
+	text-align: center;
+	top: 40%;
 }
