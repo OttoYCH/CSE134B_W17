@@ -627,6 +627,39 @@ tr {
 	text-align: center;
 }
 
+.infocontainer {
+	text-align: center;
+	font-family: "Comic Sans MS";
+}
+
+.infocontainer input, label {
+	display: block;
+}
+
+.infocontainer input {
+	border-radius: 2vw;
+}
+
+.small-input {
+	width:20vw;
+	height:4vw;
+	border-radius: 2vw;
+}
+
+/*
+.usernamecontainer label {
+	clear: both;
+	float: left;
+	margin-right: 2vw;
+}
+
+.usernamecontainer input {
+	float: left;
+	height:3vw;
+	border-radius: 1vw;
+}
+*/
+
 .textbox_size {
 	width: 330px; 
 	height: 30px;
