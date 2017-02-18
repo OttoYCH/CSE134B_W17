@@ -2,34 +2,42 @@
 <html>
   <head> 
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="./css/coffee.css">
     <title>Coffee-Dex</title> 
   </head>
   <form>
-    <div class="imgcontainer">
+    <div class="coffee_img">
       <img src="coffee_cup.png" width="100" height="150" alt="Coffee Cup" id="coffeeimg"> 
     </div>
 
     <div class="infocontainer">
-      <label><b>Brew Name</b></label>
-      <input type="text" value="Americano" id="brew" disabled>
-
-      <label><b>Hot</b></label>
-      <input type="text" value="Yes" id="hot" disabled>
-
-      <label><b>Price</b></label>
-      <input type="text" value="$2.95" id="price" disabled>
-
-      <label><b>Shop Location</b> <a href="#">Search on the map</a></label>
-      <input type="text" value="9500 gilman Dr, La Jolla, CA 92093" id="location" disabled>
-
-      <label><b>Rating</b></label>
+      <label><b>Brew Name:</b></label>
+      <input type="text" class="textbox_coffee_size" value="Americano" id="brew" disabled>
+      <br>
+      <label><b>Served Hot:</b></label>
+      <input type="text" class="textbox_coffee_size" value="Yes" id="hot" disabled>
+      <br>
+      <label><b>Price:</b></label>
+      <input type="text" class="textbox_coffee_size" value="$2.95" id="price" disabled>
+      <br>
+      <label><b>Shop Location:</b>
+      <br>
+      <input type="text" class="textbox_size text_size" value="9500 gilman Dr, La Jolla, CA 92093" id="location" disabled>
+      <br>
+      <a href="#">Search Maps!</a></label> <img src="maps.png" width="20" height="20" alt="Maps" id="mapimg">
+      <br>
+      <label><b>Rating:</b></label>
+      <br>
       <input type="range" id="rating">
-
-      <label><b>Order Link</b></label>
-      <input type="url" value="http://www.ucsdcoffee.com/order" id="link" disabled>
-
-      <label><b>Note</b></label>
-      <textarea rows="10" cols="100" id="note"></textarea>
+      <br>
+      <label><b>Order Link:</b></label>
+      <br>
+      <input type="url" class="hyperlink" value="http://www.ucsdcoffee.com/order" id="link" disabled>
+      <br>
+      <label><b>Notes:</b></label>
+      <br>
+      <textarea class="notes-textarea" rows="5" id="note"></textarea>
     </div>
 
     <div class="ordercontainer">
