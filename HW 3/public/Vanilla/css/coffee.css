@@ -409,3 +409,75 @@ tr {
 	font-family:Courier;
 	color: white;
 }
+
+.dropbtn {
+	background-color: ‎#4682b4;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.StorageList {
+	position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: Courier;
+}
+
+.dropdown-content a:hover {background-color: #fffacd}
+
+.StorageList:hover .dropdown-content {
+    display: block;
+}
+
+.StorageList:hover .dropbtn {
+    background-color: #daa520;
+}
+
+.selectFriend {
+	position:absolute;
+	top:8%;
+	left:110%;
+    background-color: #008CFF;
+    width: 24vw;
+    height:10vh; 
+    border-radius: 1vh;
+    color: white;
+    padding: 15px 32px;
+    font-size: 2vh;
+}
+
+.backBtn {
+	position: absolute;
+	top:180%;
+	left:110%;
+    background-color: #EEEEEE;
+    border-radius: 1vh;
+    color: white;
+    width: 16vw;
+    height:10vh;
+    font-size: 2vh;
+}
+
+.sharefriend {
+	position: absolute;
+	top: 30%;
+	left: 12%
+}

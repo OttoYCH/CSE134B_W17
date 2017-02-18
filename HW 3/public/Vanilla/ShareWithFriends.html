@@ -1,35 +1,30 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <link rel="stylesheet" type="text/css" href="./css/coffee.css">
 	<title>Share with Freind</title>
 </head>
 <body>
-
+<div class="sharefriend">
 <div class="StorageList">
-	<button onclick="fetchList()">My Favorite</button>
-	<p id="demo"></p>
-	
-	<script>
-	function fetchList() {
-		document.getElementById("demo").innerHTML = "Searching My Favorite List...";
-	}
-	</script>
+	<button class="dropbtn">Coffee Storage</button>
+	<div class="dropdown-content">
+		<a href="#">White Mocha</a>
+		<a href="#">Caramel Macchiato</a>
+		<a href="#">Green Tea Frappuccino</a>
+		<a href="#">Vanilla Latte</a>
+		<a href="#">Cappuccino</a>
+		<a href="#">Americano</a>
+	</div>
 </div>
 
-<div class="SelectFriends">
-	<form action="./EnterPhoneNumber.html" id="form1">
-		
-	</form>
 
-	<button type="submit" form="form1" value="Select Friends">Select Friends</button>
+	<button onclick="location.href ='./EnterPhoneNumber.html';" class="selectFriend">Select Friends</button>
+
+	<button onclick="location.href ='./main_page.html';" class="backBtn">Back</button>
+
 </div>
-
-<div class="Back">
-	<form action="./main_page.html" id="form2">
-		
-	</form>
-	<button type="submit" form="form2" value="BACK">Back</button>
-</div>
-
 </body>
 </html>
