@@ -631,20 +631,31 @@ tr {
 .infocontainer {
 	text-align: center;
 	font-family: "Comic Sans MS";
+	color: #994C00;
 }
 
 .infocontainer input, label {
 	display: block;
 }
 
-.infocontainer input {
+.infocontainer label {
+	font-weight: bold;
+	font-size: 5vw;
+}
+
+.infocontainer input, textarea {
 	border-radius: 2vw;
+	max-width: 80vw
 }
 
 .small-input {
 	width:20vw;
-	height:4vw;
-	border-radius: 2vw;
+	height:5vw;
+}
+
+.large-input {
+	width:80vw;
+	height:5vw;
 }
 
 /*
