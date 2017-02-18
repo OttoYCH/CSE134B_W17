@@ -279,6 +279,43 @@ body {
 	color: grey;
 }
 
+.removemsg {
+	position:absolute;
+	margin: 1vw;
+	top:30%;
+	left: 10%;
+	text-align: center;
+	font-size: 3vh;
+	font-family: Courier;
+	color: grey;
+}
+
+.removeYes {
+	position: absolute;
+	top:45%;
+	left: 30%;
+	width: 9vw;
+	height: 4vh;
+	background-color: #58B957;
+	font-size: 2vh;
+	border-radius: 3px;
+	font-family: Courier;
+	color: white;
+} 
+
+.removeNo {
+	position:absolute;
+	top: 45%;
+	left:40%;
+	width: 9vw;
+	height: 4vh;	
+	background-color: #DB524C;
+	font-size: 2vh;
+	border-radius: 3px;
+	font-family: Courier;
+	color: white;
+}
+
 .OrderDetail {
 	position: absolute;
 	top: 5%;
