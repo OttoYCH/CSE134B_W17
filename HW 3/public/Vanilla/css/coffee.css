@@ -3,6 +3,17 @@ body {
 	background-color: rgb(255, 255, 255);
 }
 
+.page_container {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-right: 15px;
+  padding-left: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .wireframe h1  {
 	color: red;
 	font-weight:bold;
@@ -13,14 +24,13 @@ body {
 .mainPage_container {
 	background-color: #DAE8FC;
 	width: 40vw;
-	height: 60vw;
+	margin: auto;
+	height: 70vw;
 	border-radius: 4vw;
 	padding: 5vw 5vh;
-	margin: 6vw;
 	border: 2vw double #6C8EBF;
 	position: relative;
-	top: 15vh;
-	left: 15vw;
+	 top: 15vh;
 }
 
 #searchCoffee {
@@ -106,15 +116,16 @@ body {
 .loginimg_container {
 	position: absolute;
 	top: 28%;
-	left:20%;	
+	left:20%; 
 }
 
 .loginimg_container img {
-	width: 15vw;
+  width: 15vw;
 	height: 22vh;
 }
 
 .loginimg_container h1 {
+	text-align: center;
 	font-size: 2vw;
 	font-weight: bold;
 	font-family: "Comic Sans MS";
