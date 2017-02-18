@@ -533,7 +533,7 @@ tr {
 }
 
 .uemailcontainer input[type="text"] {
-	border: solid 2px #lightgreen;
+	border: solid 2px lightgreen;
   	box-shadow: 0 0 5px 1px lightblue;
 }
 
@@ -542,5 +542,40 @@ tr {
     border-radius: 1vh;
     color: red;
     font-family: Courier;
+    font-weight:bold;
+}
+
+.searchPage {
+	position: absolute;
+	top:40%;
+	left:25%
+}
+
+.searchbar input {
+	border-radius:2px;
+	border: solid 2px lightblue;
+	text-align: left;        
+	font-family:Courier;        
+}
+
+.searchBtn {
+    background-color: #fffacd;
+    border-radius: 1vh;
+    color: red;
+    font-weight:bold;
+}
+
+.randomcontainer {
+	background-color: lightblue;
+    border-radius: 1vh;
+    color: white;
+    font-weight:bold;
+}
+
+.backcontainer {
+    background-color:#EEEEEE;
+	background-color: ;
+    border-radius: 1vh;
+    color: black;
     font-weight:bold;
 }
