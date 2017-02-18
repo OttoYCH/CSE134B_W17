@@ -615,3 +615,34 @@ tr {
     color: white;
     font-weight:bold;
 }
+
+.coffee_img {
+	text-align: center;
+}
+
+.textbox_size {
+	width: 330px; 
+	height: 30px;
+}
+
+.textbox_coffee_size {
+	width: 200px;
+	height:30px;
+}
+
+.text_size {
+	font-size: 125%;
+}
+
+.bg-warning {
+	background-color: #fcf8e3;
+}
+
+.notes-textarea {
+  width: 300px;
+  height: 120px;
+}
+
+.hyperlink {
+	width: 330px;
+}
