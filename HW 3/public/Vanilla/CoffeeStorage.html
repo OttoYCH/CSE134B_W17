@@ -1,13 +1,16 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <link rel="stylesheet" type="text/css" href="./css/coffee.css">
 	<title>Coffee Storage</title>
 </head>
 <body>
-
+	<div class="StoragePage">
 	<div class="StorageList">
 		<p>Enter coffee title to search in my favorite list.</p>
-		<input type="search" id="myInput">
+		<input type="search" id="myInput" value="Enter here">
 		
 		<p id="demo"></p>
 		
@@ -19,28 +22,14 @@
 		</script>
 	</div>
 
-	<div class="QuickCompare">
-		<form action="./QuickCompare.html" id="form1">
-			
-		</form>
-		
-		<button type="submit" form="form1" value="QuickCompare">Quick Compare</button>
-	</div>
 
-	<div class="Remove">
-		<form action="./Remove.html" id="form2">
-			
-		</form>
-		<button type="submit" form="form2" value="Remove">Remove</button>
-	</div>
+		<button onclick="location.href = './QuickCompare.html';" class="QPBtn">Quick Compare</button>
 
-	<div class="Back">
-		<form action="./main_page.html" id="form3">
-		
-		</form>
-		<button type="submit" form="form3" value="BACK">Back</button>
-	</div>
+		<button onclick="location.href = './Remove.html';" class="removeBtn">Remove</button>
 	
+		<button onclick="location.href = './main_page.html';" class="backcontainer">Back</button>
+	
+</div>	
 
 </body>
 </html>

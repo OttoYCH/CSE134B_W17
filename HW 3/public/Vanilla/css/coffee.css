@@ -579,3 +579,39 @@ tr {
     color: black;
     font-weight:bold;
 }
+
+.StoragePage {
+	position: absolute;
+	top:35%;
+	left:15%;
+}
+
+.StorageList p {
+	font-size: 3vw;
+	font-family: Courier;
+	color:#DB524C;
+	font-weight:bold;
+} 
+
+.StorageList input {
+	border-radius:2px;
+	border: solid 2px lightblue;
+	text-align: left;        
+	font-family:Courier;
+	font-style:italic;
+	color:#EEEEEE;
+}
+
+.QPBtn {
+	background-color:#008CFF;
+    border-radius: 1vh;
+    color: white;
+    font-weight:bold;
+}
+
+.removeBtn {
+	background-color:#008CFF;
+    border-radius: 1vh;
+    color: white;
+    font-weight:bold;
+}
