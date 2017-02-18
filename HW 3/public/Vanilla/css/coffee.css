@@ -116,17 +116,17 @@ body {
 .loginimg_container {
 	position: absolute;
 	top: 28%;
-	left:20%; 
+	left:10%; 
 }
 
 .loginimg_container img {
-  width: 15vw;
+  width: 20vw;
 	height: 22vh;
 }
 
 .loginimg_container h1 {
 	text-align: center;
-	font-size: 2vw;
+	font-size: 3vw;
 	font-weight: bold;
 	font-family: "Comic Sans MS";
 	color: #994C00;
@@ -141,7 +141,7 @@ body {
 .usernamecontainer {
 	position: relative;
 	font-family: "Comic Sans MS";
-	font-size: 2vw;
+	font-size: 3vw;
 }
 
 .usernamecontainer label {
@@ -152,15 +152,14 @@ body {
 
 .usernamecontainer input {
 	float: left;
-	height:2vw;
+	height:3vw;
 	border-radius: 1vw;
 }
 
 .passwordcontainer {
 	position: relative;
 	font-family: "Comic Sans MS";
-	font-size: 2vw;
-	left: 3px;
+	font-size: 3vw;
 }
 
 .passwordcontainer label {
@@ -171,7 +170,7 @@ body {
 
 .passwordcontainer input {
 	float: left;
-	height:2vw;
+	height:3vw;
 	border-radius: 1vw;
 }
 
@@ -187,7 +186,7 @@ body {
 	position: absolute;
 	top: 0px;
 	left: 120%;
-	width: 10vw;
+	width: 15vw;
 	height: 5vh;
 	background-color: #00CC00; 
     border: none;
