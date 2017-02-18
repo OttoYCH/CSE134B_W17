@@ -240,9 +240,6 @@ body {
 }
 
 .logout_page {
-	position:absolute;
-	top:35%;
-	left: 25%;
 	background-color: white;
 	border: 5px double #AAAAAA;
 	border-radius: 8px;
@@ -559,7 +556,7 @@ tr {
 .searchPage {
 	position: absolute;
 	top:40%;
-	left:25%
+	left:15%
 }
 
 .searchbar input {
