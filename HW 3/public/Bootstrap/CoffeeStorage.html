@@ -2,13 +2,14 @@
 <html>
 	<head>
 	  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	  <meta name="viewport" content="width=device-width, initial-scale=1"/>
 	  <link href="css/bootstrap.css" rel="stylesheet">
 	  <link href="css/bootstrap-theme.css" rel="stylesheet">
 	  <title>Coffee Storage</title>
 	</head>
 	<body>
-		<div class="container">
-			<div class="StorageList">
+		<div class="bg-warning">
+			<div class="container">
 				<p>Enter coffee title to search in my favorite list.</p>
 				<input type="search" id="myInput">
 				
@@ -22,26 +23,29 @@
 				</script>
 			</div>
 
-			<div class="QuickCompare">
-				<form action="./QuickCompare.html" id="form1">
+			<div class="text-right">
+				<div class="QuickCompare">
+					<form action="./QuickCompare.html" id="form1">
+					</form>
 					
-				</form>
-				
-				<button type="submit" form="form1" value="QuickCompare">Quick Compare</button>
-			</div>
+					<button type="submit" form="form1" value="QuickCompare" class="btn btn-primary">Quick Compare</button>
+				</div>
 
-			<div class="Remove">
-				<form action="./Remove.html" id="form2">
-					
-				</form>
-				<button type="submit" form="form2" value="Remove">Remove</button>
-			</div>
+				<div class="Remove">
+					<form action="./Remove.html" id="form2">	
+					</form>
 
-			<div class="Back">
-				<form action="./main_page.html" id="form3">
-				
-				</form>
-				<button type="submit" form="form3" value="BACK">Back</button>
+					<button type="submit" form="form2" value="Remove" class="btn btn-danger">Remove</button>
+				</div>
+
+				<br>
+
+				<div class="Back">
+					<form action="./main_page.html" id="form3">
+					</form>
+
+					<button type="submit" form="form3" value="BACK" class="btn btn-warning">Back</button>
+				</div>
 			</div>
 		</div>
 	</body>
