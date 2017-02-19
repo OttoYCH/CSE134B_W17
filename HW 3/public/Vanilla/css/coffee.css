@@ -215,24 +215,24 @@ body {
 }
 
 .buttonYes {
-	width: 75px;
-	height: 40px;
+	width: 8vw;
+	height: 5vh;
 	text-align: center;
 	background-color: #58B957;
 	border-radius: 4px;
-	font-size: 16px;
+	font-size: 2vw;
 	font-family:"Helvetica";
 	color: white;
 	border:none;
 }
 
 .buttonNo {
-	width: 75px;
-	height: 40px;
+	width: 8vw;
+	height: 5vh;
 	text-align: center;
 	background-color: #DB524C;
 	border-radius: 4px;
-	font-size: 16px;
+	font-size: 2vw;
 	font-family:"Helvetica";
 	color: white;
 	border:none;
@@ -324,9 +324,7 @@ body {
 }
 
 .removemsg {
-	position:absolute;
 	margin: 1vw;
-	top:20%;
 	text-align: center;
 	font-size: 5vh;
 	font-family: Courier;
@@ -763,4 +761,15 @@ tr {
 .bigger_text {
 	font_size: 6vw;
 
+}
+
+.removePage {
+	position: absolute;
+	top: 30%;
+	left: 5%;
+}
+
+.btnRemovePage {
+	position: absolute;
+	left: 40%;
 }
