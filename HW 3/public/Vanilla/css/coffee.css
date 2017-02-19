@@ -221,7 +221,7 @@ body {
 	background-color: #58B957;
 	border-radius: 4px;
 	font-size: 16px;
-	font-family:Helvetica;
+	font-family:"Helvetica";
 	color: white;
 	border:none;
 }
@@ -233,7 +233,7 @@ body {
 	background-color: #DB524C;
 	border-radius: 4px;
 	font-size: 16px;
-	font-family:Helvetica;
+	font-family:"Helvetica";
 	color: white;
 	border:none;
 }
@@ -242,7 +242,7 @@ body {
 	text-align: center;
 	width: 80%vw;
 	height: 20%vh;
-	font-family:Courier;
+	font-family:"Courier";
 
 }
 
@@ -268,7 +268,7 @@ body {
 	background-color: #58B957;
 	font-size: 2vh;
 	border-radius: 3px;
-	font-family: Courier;
+	font-family: "Courier";
 	color: white;
 }
 
@@ -281,7 +281,7 @@ body {
 	background-color: #DB524C;
 	font-size: 2vh;
 	border-radius: 3px;
-	font-family: Courier;
+	font-family: "Courier";
 	color: white;
 }
 
@@ -509,7 +509,7 @@ tr {
 
 .phonenumber h1 {
 	color:#6F4E37;
-	font-size:3vw;
+	font-size:6vw;
 	font-family:Courier;
 	font-weight:bold;
 	
@@ -518,6 +518,7 @@ tr {
 .phonenumber input {
 	height:2vh;
 	border-radius: 1vw;
+	font-size:4vw;
 }
 
 .mobile {
@@ -527,6 +528,7 @@ tr {
 .sendBtn {
     background-color: #58B957;
     border-radius: 1vh;
+    border:none;
     color: white;
 }
 
@@ -534,6 +536,7 @@ tr {
     background-color: #DB524C;
     border-radius: 1vh;
     color: white;
+    border:none;
 }
 
 .uemailcontainer {
@@ -592,10 +595,9 @@ tr {
 
 .backcontainer {
     background-color:#EEEEEE;
-	background-color: ;
     border-radius: 1vh;
     color: black;
-    font-weight:bold;
+    border:none;
 }
 
 .StoragePage {
@@ -624,14 +626,17 @@ tr {
 	background-color:#008CFF;
     border-radius: 1vh;
     color: white;
-    font-weight:bold;
+    border:none;
+    font-family: Helvetica;
+
 }
 
 .removeBtn {
-    background-color:#FF0000;
+    background-color:#DB524C;
     border-radius: 1vh;
     color: white;
-    font-weight:bold;
+    border: none;
+    font-family: Helvetica;
 }
 
 .coffee_img {
@@ -660,7 +665,7 @@ tr {
 }
 
 .addbutton {
-	background-color: #00CC00; 
+	background-color: #58B957; 
     border: none;
     color: white;
     text-align: center;
@@ -673,7 +678,6 @@ tr {
 .backbutton {
 	background-color: none; 
     border: none;
-    color: #994C00;
     text-align: center;
     font-size: 2vh;
     font-family: "Comic Sans MS";
@@ -751,8 +755,11 @@ tr {
 }
 
 .center_button {
-	text-align: center;
-	top: 40%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -100px;
 }
 
 .bigger_text {
