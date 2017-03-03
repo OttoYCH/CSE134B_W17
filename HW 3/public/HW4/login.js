@@ -26,6 +26,14 @@
 		// Sign in
 		const promise = auth.signInWithEmailAndPassword(email, password);
 		promise.catch(e => console.log(e.message));
+		promise.then(firebaseUser => {
+			if (firebaseUser) {
+				window.location.href = "./main_page.html";
+			} else {
+				window.location.href = "./login.html";
+			}
+		});
+		//promise.then(window.location.href = "./main_page.html", e => console.log(e.message));
 		//window.location.href = "./main_page.html";
 	});
 
@@ -47,6 +55,7 @@
 	firebase.auth().onAuthStateChanged(firebaseUser => {
 		if (firebaseUser) {
 			console.log(firebaseUser);
+			//console.log('You are authenticated');
 		} else {
 			console.log('not logged in');
 		}
