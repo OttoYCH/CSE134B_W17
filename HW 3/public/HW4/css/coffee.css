@@ -146,19 +146,19 @@ body {
 	left: 35%;
 }
 
-.usernamecontainer {
+.useremailcontainer {
 	position: relative;
 	font-family: "Comic Sans MS";
 	font-size: 3vw;
 }
 
-.usernamecontainer label {
+.useremailcontainer label {
 	clear: both;
 	float: left;
 	margin-right: 2vw;
 }
 
-.usernamecontainer input {
+.useremailcontainer input {
 	float: left;
 	height:3vw;
 	border-radius: 1vw;
@@ -190,13 +190,29 @@ body {
 	font-size: 2vh;
 }
 
-.logincontainer button {
+#btnLogin {
 	position: absolute;
 	top: 0px;
 	left: 120%;
 	width: 15vw;
 	height: 5vh;
 	background-color: #58B957; 
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 2vh;
+    font-family: "Helvetica";
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+#btnSignup {
+	position: absolute;
+	top: 35px;
+	left: 120%;
+	width: 15vw;
+	height: 5vh;
+	background-color: lightblue; 
     border: none;
     color: white;
     text-align: center;

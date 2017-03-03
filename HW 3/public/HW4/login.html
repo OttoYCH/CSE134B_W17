@@ -4,6 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <link rel="stylesheet" type="text/css" href="./css/coffee.css">
+    <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-auth.js"></script>
+
     <title>Coffee-Dex</title> 
   </head>
 
@@ -16,23 +20,27 @@
       </div>
       
       <div class="logininfo">
-      <div class="usernamecontainer">
-        <label for="Username">Username</label> <br/>
-        <input name="Username" type="text" placeholder="Enter Username" id="uname" required /><br />
+      <div class="useremailcontainer">
+        <label for="Useremail">Email</label> <br/>
+        <input name="Useremail" type="text" placeholder="Enter Email" id="txtEmail" required /><br />
       </div>
       <div class="passwordcontainer">
         <label for="Password">Password</label> <br/>
-        <input type="password" name="Password" placeholder="Enter Password" id="pswd" required />
+        <input type="password" name="Password" placeholder="Enter Password" id="txtPassword" required />
       </div>
       
       <div class="logincontainer">
         <input type="checkbox" checked="checked" /> Remember me
-        <button onclick="location.href = './main_page.html';">Login</button>
+        <button id="btnLogin">Login</button>
+        <button id="btnSignup">Sign Up</button>
       </div>
 
       <div class="forgetpw_container">
         <span class="psw"> <a href="./reset_password.html">Forgot password?</a></span>
       </div>
   </div>
+
+  <script src="login.js"></script>
+
 </body>
 </html>
