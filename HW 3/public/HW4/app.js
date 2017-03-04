@@ -71,7 +71,7 @@ var vm = new Vue({
 	const btnSignup = document.getElementById('btnSignup');
 
 	// Add login event
-	btnLogin.addEventListener('click', e => {
+	function userLogin() {
 		// Get email and password
 		const email = txtEmail.value;
 		const password = txtPassword.value;
@@ -80,10 +80,10 @@ var vm = new Vue({
 		// Sign in
 		const promise = auth.signInWithEmailAndPassword(email, password);
 		promise.catch(e => console.log(e.message));
-	});
+	}
 
 	// Add signup event
-	btnSignup.addEventListener('click', e => {
+	function userSignup() {
 		// Get email and password
 		const email = txtEmail.value;
 		const password = txtPassword.value;
@@ -96,10 +96,10 @@ var vm = new Vue({
 			alert("You have signed up and logged in successfully!");
 			//window.location.href = "./login.html";
 		});
-	});   
+	} 
 
 	// Add login event
-	btnGoogle.addEventListener('click', e => {
+	function googleLogin() {
 		firebase.auth().signInWithPopup(provider).then(function(result) {
 		console.log("During");
 	  	// This gives you a Google Access Token. You can use it to access the Google API.
@@ -117,16 +117,15 @@ var vm = new Vue({
 		  var credential = error.credential;
 		  // ...
 		});
-		
-	});
+	}
 
 	// Add realtime listener
 	firebase.auth().onAuthStateChanged(firebaseUser => {
-		if (firebaseUser) {
+		if (firebaseUser && window.location.href.includes("login")) {
 			window.location.href = "./main_page.html";
-			console.log(firebaseUser);
+		//	console.log(firebaseUser);
 			//console.log('You are authenticated');
 		} else {
-			console.log('not logged in');
+		//	console.log('not logged in');
 		}
 	}); 
