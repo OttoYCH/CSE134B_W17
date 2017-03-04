@@ -119,13 +119,28 @@ var vm = new Vue({
 		});
 	}
 
+	function userLogout() {
+		if (confirm('Do you want to logout?')) {
+			firebase.auth().signOut();
+			console.log('You have been logged out successfully!');
+			window.location.href = "./login.html";
+		} else {
+			// Do nothing
+		}
+	}
+
 	// Add realtime listener
 	firebase.auth().onAuthStateChanged(firebaseUser => {
 		if (firebaseUser && window.location.href.includes("login")) {
 			window.location.href = "./main_page.html";
 		//	console.log(firebaseUser);
 			//console.log('You are authenticated');
-		} else {
+		} 
+		if (!firebaseUser && !window.location.href.includes("login")) {
+			window.location.href = "./login.html";
+		}
+		else {
+
 		//	console.log('not logged in');
 		}
 	}); 
