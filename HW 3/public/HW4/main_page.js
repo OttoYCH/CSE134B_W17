@@ -1,4 +1,4 @@
-(function() {
+
 
 	// Get elements
     const btnLogout = document.getElementById('btnLogout');
@@ -23,4 +23,3 @@
 	});
 
 
-}());

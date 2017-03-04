@@ -1,6 +1,6 @@
 var provider = new firebase.auth.GoogleAuthProvider();
 
-(function() {
+
 
 	// Initialize Firebase
     var config = {
@@ -16,30 +16,6 @@ var provider = new firebase.auth.GoogleAuthProvider();
     const txtPassword = document.getElementById('txtPassword');
 	const btnLogin = document.getElementById('btnLogin');
 	const btnSignup = document.getElementById('btnSignup');
-
-	var googleProvider = new firebase.auth.GoogleAuthProvider();
-	googleProvider.addScope('https://www.googleapis.com/auth/plus.login');
-
-	googleProvider.setCustomParameters({
-  		'login_hint': 'user@gmail.com'
-	});
-
-	firebase.auth().signInWithPopup(googleProvider).then(function(result) {
-  	// This gives you a Google Access Token. You can use it to access the Google API.
-  	var token = result.credential.accessToken;
-  	// The signed-in user info.
-  	var user = result.user;
-  	// ...
-	}).catch(function(error) {
-  	// Handle Errors here.
-  	var errorCode = error.code;
-  	var errorMessage = error.message;
-  	// The email of the user's account used.
-  	var email = error.email;
-  	// The firebase.auth.AuthCredential type that was used.
-  	var credential = error.credential;
-  	// ...
-	});
 
 	// Add login event
 	btnLogin.addEventListener('click', e => {
@@ -85,11 +61,11 @@ var provider = new firebase.auth.GoogleAuthProvider();
 	btnGoogle.addEventListener('click', e => {
 		firebase.auth().signInWithPopup(provider).then(function(result) {
 		console.log("During");
-	  // This gives you a Google Access Token. You can use it to access the Google API.
-	  var token = result.credential.accessToken;
-	  // The signed-in user info.
-	  var user = result.user;
-	  // ...
+	  	// This gives you a Google Access Token. You can use it to access the Google API.
+	  	var token = result.credential.accessToken;
+	  	// The signed-in user info.
+	  	var user = result.user;
+	  	// ...
 		}).catch(function(error) {
 		  // Handle Errors here.
 		  var errorCode = error.code;
@@ -122,39 +98,5 @@ var provider = new firebase.auth.GoogleAuthProvider();
 		}
 	}); 
 
-}());
 
-/*
-function googleSignIn() {
-	console.log("Before");
-	firebase.auth().signInWithPopup(provider).then(function(result) {
-		console.log("During");
-	  // This gives you a Google Access Token. You can use it to access the Google API.
-	  var token = result.credential.accessToken;
-	  // The signed-in user info.
-	  var user = result.user;
-	  // ...
-		}).catch(function(error) {
-		  // Handle Errors here.
-		  var errorCode = error.code;
-		  var errorMessage = error.message;
-		  // The email of the user's account used.
-		  var email = error.email;
-		  // The firebase.auth.AuthCredential type that was used.
-		  var credential = error.credential;
-		  // ...
-		});
-		window.location.href = "./main_page.html";
-		console.log("After");
-}
-*/
 
-/*
-function onSignIn(googleUser) {
-  var profile = googleUser.getBasicProfile();
-  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-  console.log('Name: ' + profile.getName());
-  console.log('Image URL: ' + profile.getImageUrl());
-  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-}
-*/
