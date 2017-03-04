@@ -51,5 +51,14 @@ var vm = new Vue({
 				this.note = ""
 			}
 		}
+
+		removeCoffee: function (key) {
+			ref.child(key).remove();
+		}
+
+		updateCoffee: function (key, notes) {
+			ref.child(key).update({"note" : notes})
+		}
+
 	}
 });
