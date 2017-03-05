@@ -8,6 +8,51 @@
 			"rating": 3, 
 			"link": "www.ucsd.edu", 
 			"notes": "I like this coffee."
-		}
+		},
+		{
+			"name": "White Mocha",
+			"served": "hot",
+			"price": 4.3,
+			"location": "9500 Gilman Drive",
+			"rating": 5, 
+			"link": "www.ucsd.edu", 
+			"notes": "Not bad :)"
+		},
+		{
+			"name": "Green Tea Frappuccino",
+			"served": "cold",
+			"price": 5.5,
+			"location": "Westfield UTC, 4545 La Jolla Village Dr",
+			"rating": 3, 
+			"link": "www.starbucks.com", 
+			"notes": "Awesome!"
+		},
+		{
+			"name": "Caramel Macchiato",
+			"served": "hot",
+			"price": 2.5,
+			"location": "9500 Gilman Drive",
+			"rating": 4, 
+			"link": "www.starbucks.com", 
+			"notes": "I love caramel."
+		},
+		{
+			"name": "Vanilla Latte",
+			"served": "cold",
+			"price": 2.99,
+			"location": "Westfield UTC, 4545 La Jolla Village Dr",
+			"rating": 2.5, 
+			"link": "www.starbucks.com", 
+			"notes": "So so."
+		},
+		{
+			"name": "Espresso",
+			"served": "hot",
+			"price": 2,
+			"location": "9500 Gilman Drive",
+			"rating": 5, 
+			"link": "www.starbucks.com", 
+			"notes": "I need this to survive for CSE134B."
+		},
 	]
 }
