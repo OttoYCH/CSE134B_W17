@@ -35,36 +35,28 @@ function listCoffees() {
 
 function userAddFavorite() {
 	var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
-	console.log(ref);
 	var coffeename = document.getElementById("addFav").value;
-	console.log(coffeename);
 	db.ref('coffees').on('value', function(snapshot) {
 		snapshot.forEach(function(Snapshot) {
 			if (Snapshot.val().name === coffeename) {
-				console.log(Snapshot.val());
 				ref.push(Snapshot.val());
-				console.log(ref);
 				//break;
 			}
 		});
 	});
-	/*
-	console.log(thiscoffee);
-	ref.push(thiscoffee);
-	console.log(ref);
-	*/
-	/*
-	ref.push({
-		"name": thiscoffee.name,
-		"served": thiscoffee.hot,
-		"price": thiscoffee.price,
-		"picture_url": thiscoffee.picture_url,
-		"shop_location": thiscoffee.shop_location,
-		"rating": thiscoffee.rating,
-		"order_link": thiscoffee.order_link,
-		"note": thiscoffee.note
-	})
-*/
+}
+
+function userRemoveFavorite() {
+	var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
+	var coffeename = document.getElementById("remFav").value;
+	db.ref('coffees').on('value', function(snapshot) {
+		snapshot.forEach(function(Snapshot) {
+			if (Snapshot.val().name === coffeename) {
+				ref.remove(Snapshot.val());
+				//break;
+			}
+		});
+	});
 }
 /*
 var db = app.database()
