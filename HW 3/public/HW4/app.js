@@ -10,6 +10,8 @@ var app = firebase.initializeApp(config);
 var db = app.database();
 var ref = db.ref('favorites');
 
+
+
 function listCoffees() {
 	db.ref('coffees').on('value', function(snapshot) {
 		snapshot.forEach(function(Snapshot) {
