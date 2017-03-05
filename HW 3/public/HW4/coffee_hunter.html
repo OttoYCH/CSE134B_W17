@@ -46,17 +46,6 @@
         <button type="submit" formaction="./add.html" class="addbutton" type="submit">Add</button>
         <button formaction="javascript:history.go(-1)" class="backbutton">Back</button>
       </div>
-    
-    <form @submit.prevent="addCoffee">
-      <input type="text" class="form-control" id="name" v-model="name">
-      <input type="text" class="form-control" id="hot" v-model="hot">
-      <input type="text" class="form-control" id="price" v-model="price">
-      <input type="text" class="form-control" id="picture_url" v-model="picture_url">   
-      <input type="text" class="form-control" id="shop_location" v-model="shop_location">
-      <input type="text" class="form-control" id="rating" v-model="rating">
-      <input type="text" class="form-control" id="order_link" v-model="order_link">
-      <input type="text" class="form-control" id="note" v-model="note">
-    </form>
 
   </div>
     <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
