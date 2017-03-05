@@ -7,6 +7,50 @@ var config = {
     };
 
 var app = firebase.initializeApp(config);
+var db = app.database();
+var ref = db.ref('favorites');
+
+function listCoffees() {
+	db.ref('coffees').on('value', function(snapshot) {
+		snapshot.forEach(function(Snapshot) {
+			if (typeof Snapshot.val().name !== "undefined") {
+				console.log(Snapshot.val().name);
+				var para = document.createElement("p");
+				var node = document.createTextNode(Snapshot.val().name);
+				para.appendChild(node);
+				var element = document.getElementById("div1");
+				element.appendChild(para);
+			}
+		});
+	});
+}
+
+
+	/*
+	for (i = 0; i < coffeeList.length; i++) {
+		var para = document.createElement("p");
+		var node = document.createTextNode(coffeeList[i].name);
+		para.appendChild(node);
+		var element = document.getElementById("div1");
+		element.appendChild(para);
+	}
+	*/
+
+/*
+function userAddFavorite(coffeename) {
+	ref.push({
+					"name": this.name,
+					"hot": this.hot,
+					"price": this.price,
+					"picture_url": this.picture_url,
+					"shop_location": this.shop_location,
+					"rating": this.rating,
+					"order_link": this.order_link,
+					"note": this.note
+				})
+}
+*/
+
 /*
 var db = app.database()
 var ref = db.ref('userCoffee');
@@ -65,17 +109,43 @@ var vm = new Vue({
 });
 */
 
-var db = app.database();
-var ref = db.ref('/coffees/');
-ref.on('value', function(snapshot) {
-	snapshot.forEach(function(Snapshot) {
-		//console.log(Snapshot.key);
-		console.log(Snapshot.val().name);
+/*
+window.addEventListener('load', function () {
+   var vm = new Vue({
+	  el: "#app",
+	  data: {
+	    name: "",
+	    theme: "",
+	    url: ""
+	  },
+	  firebase: {
+	    playlists: ref
+	  }, 
+	  methods: {
+	    removePlaylist: function (key) {
+	      ref.child(key).remove();
+	    },
+	    addPlaylist: function () {
+	    	if (this.name.trim() && this.theme.trim() && this.url.trim()) {
+	    		ref.push({
+	    			"name": this.name,
+	    			"theme": this.theme,
+	    			"url": this.url,
+	    			"songs": 0
+	    		})
+	    		this.name = ""
+	    		this.theme = ""
+	    		this.url = ""
+	    	}
+	    }
+	    ,
+	    updatePlaylist: function(key, newCount) {
+	    	ref.child(key).update({"songs": newCount + 1})
+	    }
+	  }
 	});
-});
-
-
-
+})
+*/
 	var provider = new firebase.auth.GoogleAuthProvider();
     // Get elements
     const txtEmail = document.getElementById('txtEmail');
