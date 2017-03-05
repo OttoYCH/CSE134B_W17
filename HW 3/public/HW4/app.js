@@ -49,16 +49,10 @@ function userAddFavorite() {
 function userRemoveFavorite() {
 	var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
 	var coffeename = document.getElementById("remFav").value;
-	var index = 0;
 	ref.on('value', function(snapshot) {
 		snapshot.forEach(function(Snapshot) {
-			if (Snapshot.val().name === coffeename) {
-				//Snapshot.ref.remove();
-				//delete ref[Snapshot.key];
-				//ref.splice(index, 1)
-				
+			if (Snapshot.val().name === coffeename) {			
 				remRef = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites/' + Snapshot.key);
-				console.log(Snapshot.key);
 				remRef.set(null)
 					.then(function() {
 			    	console.log("Remove succeeded.")
@@ -67,14 +61,38 @@ function userRemoveFavorite() {
 			  	.catch(function(error) {
 			    	console.log("Remove failed: " + error.message)
 			  	});
-
-				//break;
-
 			}
-			index++;
 		});
 	});
-//	location.reload();
+}
+
+
+function userUpdateFavorite() {
+	var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
+	var coffeename = document.getElementById("remFav").value;
+	ref.on('value', function(snapshot) {
+		snapshot.forEach(function(Snapshot) {
+			if (Snapshot.val().name === coffeename) {			
+				remRef = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites/' + Snapshot.key);
+				remRef.set({
+			    link: Snapshot.val().link,
+			    location: Snapshot.val().location,
+			    name: document.getElementById("updFav").value,
+			    notes: Snapshot.val().notes,
+			    price: Snapshot.val().price,
+			    rating: Snapshot.val().rating,
+			    served: Snapshot.val().served
+			  })
+					.then(function() {
+			    	console.log("Update succeeded.")
+			    	location.reload();
+			  	})
+			  	.catch(function(error) {
+			    	console.log("Update failed: " + error.message)
+			  	});
+			}
+		});
+	});
 }
 
 /*
