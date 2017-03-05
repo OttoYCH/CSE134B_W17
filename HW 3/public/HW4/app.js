@@ -13,7 +13,9 @@ var ref = db.ref('favorites');
 
 
 function listCoffees() {
-	db.ref('coffees').on('value', function(snapshot) {
+	var input = document.getElementById("coffee").value;
+	document.getElementById("div1").innerHTML = "";
+	db.ref('coffees').orderByChild("name").equalTo(input).on('value', function(snapshot) {
 		snapshot.forEach(function(Snapshot) {
 			if (typeof Snapshot.val().name !== "undefined") {
 				console.log(Snapshot.val().name);
