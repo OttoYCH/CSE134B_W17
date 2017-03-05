@@ -18,8 +18,12 @@ function listCoffees() {
 			if (typeof Snapshot.val().name !== "undefined") {
 				console.log(Snapshot.val().name);
 				var para = document.createElement("p");
+				var a_tag = document.createElement("a");
+				para.appendChild(a_tag);
 				var node = document.createTextNode(Snapshot.val().name);
-				para.appendChild(node);
+				a_tag.appendChild(node);
+				var name = Snapshot.val().name;
+				a_tag.href = "./coffee_hunter.html?id="+name;
 				var element = document.getElementById("div1");
 				element.appendChild(para);
 			}
