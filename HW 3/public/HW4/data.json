@@ -1,0 +1,13 @@
+{
+	"coffees": [
+		{
+			"name": "Americano",
+			"served": "hot",
+			"price": 5,
+			"location": "9500 Gilman Drive",
+			"rating": 3, 
+			"link": "www.ucsd.edu", 
+			"notes": "I like this coffee."
+		}
+	]
+}
