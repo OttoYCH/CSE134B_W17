@@ -38,6 +38,7 @@ function userAddFavorite() {
 		snapshot.forEach(function(Snapshot) {
 			if (Snapshot.val().name === coffeename) {
 				ref.push(Snapshot.val());
+				//ref.set(Snapshot.val());
 				//break;
 			}
 		});
@@ -48,14 +49,29 @@ function userAddFavorite() {
 function userRemoveFavorite() {
 	var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
 	var coffeename = document.getElementById("remFav").value;
+	var index = 0;
 	ref.on('value', function(snapshot) {
 		snapshot.forEach(function(Snapshot) {
 			if (Snapshot.val().name === coffeename) {
+				//Snapshot.ref.remove();
+				//delete ref[Snapshot.key];
+				//ref.splice(index, 1)
+				
 				remRef = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites/' + Snapshot.key);
 				console.log(Snapshot.key);
-				remRef.remove();
+				remRef.set(null)
+					.then(function() {
+			    	console.log("Remove succeeded.")
+			    	location.reload();
+			  	})
+			  	.catch(function(error) {
+			    	console.log("Remove failed: " + error.message)
+			  	});
+
 				//break;
+
 			}
+			index++;
 		});
 	});
 //	location.reload();
