@@ -66,43 +66,15 @@ var vm = new Vue({
 */
 
 var db = app.database();
-var ref = db.ref('playlists');
-
-window.addEventListener('load', function () {
-   var vm = new Vue({
-	  el: "#app",
-	  data: {
-	    name: "",
-	    theme: "",
-	    url: ""
-	  },
-	  firebase: {
-	    playlists: ref
-	  }, 
-	  methods: {
-	    removePlaylist: function (key) {
-	      ref.child(key).remove();
-	    },
-	    addPlaylist: function () {
-	    	if (this.name.trim() && this.theme.trim() && this.url.trim()) {
-	    		ref.push({
-	    			"name": this.name,
-	    			"theme": this.theme,
-	    			"url": this.url,
-	    			"songs": 0
-	    		})
-	    		this.name = ""
-	    		this.theme = ""
-	    		this.url = ""
-	    	}
-	    }
-	    ,
-	    updatePlaylist: function(key, newCount) {
-	    	ref.child(key).update({"songs": newCount + 1})
-	    }
-	  }
+var ref = db.ref('/coffees/');
+ref.on('value', function(snapshot) {
+	snapshot.forEach(function(Snapshot) {
+		//console.log(Snapshot.key);
+		console.log(Snapshot.val().name);
 	});
-})
+});
+
+
 
 	var provider = new firebase.auth.GoogleAuthProvider();
     // Get elements
