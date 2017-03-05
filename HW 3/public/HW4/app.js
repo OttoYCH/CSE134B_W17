@@ -44,20 +44,25 @@ function userAddFavorite() {
 			}
 		});
 	});
+//	location.reload();
 }
 
 function userRemoveFavorite() {
 	var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
 	var coffeename = document.getElementById("remFav").value;
-	db.ref('coffees').on('value', function(snapshot) {
+	ref.on('value', function(snapshot) {
 		snapshot.forEach(function(Snapshot) {
 			if (Snapshot.val().name === coffeename) {
-				ref.remove(Snapshot.val());
+				remRef = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites/' + Snapshot.key);
+				console.log(Snapshot.key);
+				remRef.remove();
 				//break;
 			}
 		});
 	});
+//	location.reload();
 }
+
 /*
 var db = app.database()
 var ref = db.ref('userCoffee');
