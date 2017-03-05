@@ -8,7 +8,7 @@ var config = {
 
 var app = firebase.initializeApp(config);
 var db = app.database();
-var ref = db.ref('favorites');
+//var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
 
 
 
@@ -20,8 +20,12 @@ function listCoffees() {
 			if (typeof Snapshot.val().name !== "undefined") {
 				console.log(Snapshot.val().name);
 				var para = document.createElement("p");
+				var a_tag = document.createElement("a");
+				para.appendChild(a_tag);
 				var node = document.createTextNode(Snapshot.val().name);
-				para.appendChild(node);
+				a_tag.appendChild(node);
+				var name = Snapshot.val().name;
+				a_tag.href = "./coffee_hunter.html?id="+name;
 				var element = document.getElementById("div1");
 				element.appendChild(para);
 			}
@@ -29,32 +33,39 @@ function listCoffees() {
 	});
 }
 
-
+function userAddFavorite() {
+	var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
+	console.log(ref);
+	var coffeename = document.getElementById("addFav").value;
+	console.log(coffeename);
+	db.ref('coffees').on('value', function(snapshot) {
+		snapshot.forEach(function(Snapshot) {
+			if (Snapshot.val().name === coffeename) {
+				console.log(Snapshot.val());
+				ref.push(Snapshot.val());
+				console.log(ref);
+				//break;
+			}
+		});
+	});
 	/*
-	for (i = 0; i < coffeeList.length; i++) {
-		var para = document.createElement("p");
-		var node = document.createTextNode(coffeeList[i].name);
-		para.appendChild(node);
-		var element = document.getElementById("div1");
-		element.appendChild(para);
-	}
+	console.log(thiscoffee);
+	ref.push(thiscoffee);
+	console.log(ref);
 	*/
-
-/*
-function userAddFavorite(coffeename) {
+	/*
 	ref.push({
-					"name": this.name,
-					"hot": this.hot,
-					"price": this.price,
-					"picture_url": this.picture_url,
-					"shop_location": this.shop_location,
-					"rating": this.rating,
-					"order_link": this.order_link,
-					"note": this.note
-				})
-}
+		"name": thiscoffee.name,
+		"served": thiscoffee.hot,
+		"price": thiscoffee.price,
+		"picture_url": thiscoffee.picture_url,
+		"shop_location": thiscoffee.shop_location,
+		"rating": thiscoffee.rating,
+		"order_link": thiscoffee.order_link,
+		"note": thiscoffee.note
+	})
 */
-
+}
 /*
 var db = app.database()
 var ref = db.ref('userCoffee');
