@@ -197,22 +197,29 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 function loadCoffee() {
 	var temp = location.search.substring(1);
 	var name = temp.replace("%20", " ");
-	console.log(name);
-	//console.log(name);
-	db.ref('coffees').orderByChild("name").equalTo(name).on('value', function(snapshot) {
-		snapshot.forEach(function(Snapshot) {
-			//if (typeof Snapshot.val().name !== "undefined") {
-				//document.getElementById('coffeeimg').value = Snapshot.val().url;
-				document.getElementById('name').value = Snapshot.val().name;
-				document.getElementById('served').value = Snapshot.val().served;
-				document.getElementById('price').value = Snapshot.val().price;
-				//document.getElementById('rating').value = Snapshot.val().rating;
-				document.getElementById('link').value = Snapshot.val().link;
-				document.getElementById('location').value = Snapshot.val().location;
-
-			//}
+	if (name === "random") {
+		db.ref('coffees').on('value', function(snapshot) {
+			snapshot.forEach(function(Snapshot) {
+				if (Math.random() > 0.5) {
+					document.getElementById('name').value = Snapshot.val().name;
+					document.getElementById('served').value = Snapshot.val().served;
+					document.getElementById('price').value = Snapshot.val().price;
+					document.getElementById('link').value = Snapshot.val().link;
+					document.getElementById('location').value = Snapshot.val().location;
+				}
+			});
+		});	
+	}
+	else {
+		db.ref('coffees').orderByChild("name").equalTo(name).on('value', function(snapshot) {
+			snapshot.forEach(function(Snapshot) {
+					document.getElementById('name').value = Snapshot.val().name;
+					document.getElementById('served').value = Snapshot.val().served;
+					document.getElementById('price').value = Snapshot.val().price;
+					document.getElementById('link').value = Snapshot.val().link;
+					document.getElementById('location').value = Snapshot.val().location;
+			});
 		});
-	});
-
-	
+	}
 }
+
