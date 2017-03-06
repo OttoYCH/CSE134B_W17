@@ -237,13 +237,14 @@ function loadCoffee() {
 		db.ref('coffees').on('value', function(snapshot) {
 			snapshot.forEach(function(Snapshot) {
 				if (Math.random() > 0.5) {
+					var coffeeimg = document.getElementById("coffeeimg");
+       				coffeeimg.src = Snapshot.val().image_url;
 					//document.getElementById('coffeeimg').src = Snapshot.val().image_url;
 					document.getElementById('name').value = Snapshot.val().name;
 					document.getElementById('served').value = Snapshot.val().served;
 					document.getElementById('price').value = Snapshot.val().price;
 					document.getElementById('link').value = Snapshot.val().link;
 					document.getElementById('location').value = Snapshot.val().location;
-					document.getElementById('coffeeimg').value = Snapshot.val().image_url;
 				}
 			});
 		});	
@@ -251,6 +252,8 @@ function loadCoffee() {
 	else {
 		db.ref('coffees').orderByChild("name").equalTo(name).on('value', function(snapshot) {
 			snapshot.forEach(function(Snapshot) {
+				var coffeeimg = document.getElementById("coffeeimg");
+       				coffeeimg.src = Snapshot.val().image_url;
 					//document.getElementById('coffeeimg').src = Snapshot.val().image_url;
 					document.getElementById('name').value = Snapshot.val().name;
 					document.getElementById('served').value = Snapshot.val().served;
@@ -258,7 +261,6 @@ function loadCoffee() {
 					document.getElementById('link').value = Snapshot.val().link;
 					document.getElementById('location').value = Snapshot.val().location;
 					console.log(Snapshot.val().image_url);
-					document.getElementById('coffeeimg').value = Snapshot.val().image_url;
 			});
 		});
 	}
