@@ -8,10 +8,9 @@
     <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-database.js"></script>
-    <!--
     <script src="https://unpkg.com/vue"></script>
     <script src="https://unpkg.com/vuefire/dist/vuefire.js"></script>
-    -->
+
     <title>Coffee-Dex</title> 
   </head>
 <body onload="loadCoffee()">
@@ -39,24 +38,10 @@
           <a href="#">Search Maps!</a> <img src="maps.png" width="15" height="15" alt="Maps" id="mapimg">
         </label>
         <input type="text" class="large-input" id="location" readonly>
-        <br/>
-        
+        <br/> 
         <label style="float:left;"> Rating: </label>
         <input type="range" id="rating">
-        <!--
-        <span class="rating"> 
-            <input id="star_5" type="radio" name="star" value="5">
-            <label for="star_5"></label>
-            <input id="star_4" type="radio" name="star" value="4">
-            <label for="star_4"></label>
-            <input id="star_3" type="radio" name="star" value="3">
-            <label for="star_3"></label>
-            <input id="star_2" type="radio" name="star" value="2">
-            <label for="star_2"></label>
-            <input id="star_1" type="radio" name="star" value="1">
-            <label for="star_1"></label>
-        </span>
-        -->
+        <br/>
         <label>Order Link: <button>Order</button></label>
         <input type="url" class="large-input" id="link" readonly>
         <br>
@@ -65,13 +50,17 @@
       </div>
 
       <div class="addcontainer">
-        <button onclick="userAddFavorite()" class="addbutton">Add</button>
-        <button onclick="location.href = './SearchForCoffee.html';" class="backbutton">Back</button>
+        <button onclick="userRemoveFavorite()" class="addbutton">Remove</button>
+        <button onclick="location.href = './CoffeeStorage.html';" class="backbutton">Back</button>
       </div>
+
   </div>
 
     <script src="app.js"></script>
 
   </body>
 
+
+
 </html>
+

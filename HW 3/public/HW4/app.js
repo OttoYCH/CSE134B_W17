@@ -8,17 +8,22 @@ var config = {
 
 var app = firebase.initializeApp(config);
 var db = app.database();
-//var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
 
 
-
+/*
+ * Called from SearchForCoffee.html
+ *
+ * Read search input box and list coffee with matching name.
+ * If search input box is blank, all coffees with be listed.
+ * Each name will be a link to the coffee_hunter.html with relevant data.
+ *
+ */
 function listCoffees() {
 	var input = document.getElementById("coffee").value;
 	document.getElementById("div1").innerHTML = "";
-	db.ref('coffees').orderByChild("name").equalTo(input).on('value', function(snapshot) {
-		snapshot.forEach(function(Snapshot) {
-			if (typeof Snapshot.val().name !== "undefined") {
-				console.log(Snapshot.val().name);
+	if (input === "") {
+		db.ref('coffees').on('value', function(snapshot) {
+			snapshot.forEach(function(Snapshot) {
 				var para = document.createElement("p");
 				var a_tag = document.createElement("a");
 				para.appendChild(a_tag);
@@ -28,9 +33,26 @@ function listCoffees() {
 				a_tag.href = "./coffee_hunter.html?"+name;
 				var element = document.getElementById("div1");
 				element.appendChild(para);
-			}
+			});
 		});
-	});
+	}
+	else {
+		db.ref('coffees').orderByChild("name").equalTo(input).on('value', function(snapshot) {
+			snapshot.forEach(function(Snapshot) {
+				if (typeof Snapshot.val().name !== "undefined") {
+					var para = document.createElement("p");
+					var a_tag = document.createElement("a");
+					para.appendChild(a_tag);
+					var node = document.createTextNode(Snapshot.val().name);
+					a_tag.appendChild(node);
+					var name = Snapshot.val().name;
+					a_tag.href = "./coffee_hunter.html?"+name;
+					var element = document.getElementById("div1");
+					element.appendChild(para);
+				}
+			});
+		});
+	}
 }
 
 function listFavorite() {
@@ -61,15 +83,20 @@ function listFavorite() {
 }
 
 function userAddFavorite() {
-	var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
-	var coffeename = document.getElementById("name").value;
-	db.ref('coffees').on('value', function(snapshot) {
-		snapshot.forEach(function(Snapshot) {
-			if (Snapshot.val().name === coffeename) {
-				ref.push(Snapshot.val());
-			}
+	if (confirm("Would you like to add this coffee to your favorites list?")) {
+		var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
+		var coffeename = document.getElementById("name").value;
+		db.ref('coffees').on('value', function(snapshot) {
+			snapshot.forEach(function(Snapshot) {
+				if (Snapshot.val().name === coffeename) {
+					ref.push(Snapshot.val());
+				}
+			});
 		});
-	});
+	}
+	else {
+		return false;
+	}
 }
 
 function userRemoveFavorite() {
@@ -159,20 +186,18 @@ function userSignup() {
 function googleLogin() {
 	firebase.auth().signInWithPopup(provider).then(function(result) {
 	console.log("During");
-  	// This gives you a Google Access Token. You can use it to access the Google API.
-  	var token = result.credential.accessToken;
-  	// The signed-in user info.
-  	var user = result.user;
-  	// ...
-		}).catch(function(error) {
-	  // Handle Errors here.
-	  var errorCode = error.code;
-	  var errorMessage = error.message;
-	  // The email of the user's account used.
-	  var email = error.email;
-	  // The firebase.auth.AuthCredential type that was used.
-	  var credential = error.credential;
-	  // ...
+  // This gives you a Google Access Token. You can use it to access the Google API.
+  var token = result.credential.accessToken;
+  // The signed-in user info.
+  var user = result.user;
+	}).catch(function(error) {
+	  	// Handle Errors here.
+	  	var errorCode = error.code;
+	  	var errorMessage = error.message;
+	  	// The email of the user's account used.
+	  	var email = error.email;
+	  	// The firebase.auth.AuthCredential type that was used.
+	  	var credential = error.credential;
 		});
 }
 
@@ -182,9 +207,6 @@ function userLogout() {
 		console.log('You have been logged out successfully!');
 		window.location.href = "./login.html";
 	} 
-	else {
-		// Do nothing
-	}
 }
 
 // Add realtime listener
@@ -195,31 +217,56 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 	if (!firebaseUser && !window.location.href.includes("login")) {
 		window.location.href = "./login.html";
 	}
-	else {
-		// Do nothing
-	}
 }); 
 
 // Loads things into coffee hunter from the database
 function loadCoffee() {
 	var temp = location.search.substring(1);
 	var name = temp.replace("%20", " ");
-	console.log(name);
-	//console.log(name);
-	db.ref('coffees').orderByChild("name").equalTo(name).on('value', function(snapshot) {
-		snapshot.forEach(function(Snapshot) {
-			//if (typeof Snapshot.val().name !== "undefined") {
-				//document.getElementById('coffeeimg').value = Snapshot.val().url;
-				document.getElementById('name').value = Snapshot.val().name;
-				document.getElementById('served').value = Snapshot.val().served;
-				document.getElementById('price').value = Snapshot.val().price;
-				//document.getElementById('rating').value = Snapshot.val().rating;
-				document.getElementById('link').value = Snapshot.val().link;
-				document.getElementById('location').value = Snapshot.val().location;
+	if (name === "random") {
+		db.ref('coffees').on('value', function(snapshot) {
+			snapshot.forEach(function(Snapshot) {
+				if (Math.random() > 0.5) {
+					document.getElementById('name').value = Snapshot.val().name;
+					document.getElementById('served').value = Snapshot.val().served;
+					document.getElementById('price').value = Snapshot.val().price;
+					document.getElementById('link').value = Snapshot.val().link;
+					document.getElementById('location').value = Snapshot.val().location;
+				}
+			});
+		});	
+	}
+	else {
+		db.ref('coffees').orderByChild("name").equalTo(name).on('value', function(snapshot) {
+			snapshot.forEach(function(Snapshot) {
+					document.getElementById('name').value = Snapshot.val().name;
+					document.getElementById('served').value = Snapshot.val().served;
+					document.getElementById('price').value = Snapshot.val().price;
+					document.getElementById('link').value = Snapshot.val().link;
+					document.getElementById('location').value = Snapshot.val().location;
+			});
+		});
+	}
+}
 
-			//}
+
+function listFavorites() {
+	console.log(firebase.auth().currentUser);
+	var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
+	ref.on('value', function(snapshot) {
+		snapshot.forEach(function(Snapshot) {
+			if (typeof Snapshot.val().name !== "undefined") {
+				console.log(Snapshot.val().name);
+				var para = document.createElement("p");
+				var a_tag = document.createElement("a");
+				para.appendChild(a_tag);
+				var node = document.createTextNode(Snapshot.val().name);
+				a_tag.appendChild(node);
+				var name = Snapshot.val().name;
+				a_tag.href = "./coffee_favorites.html?"+name;
+				var element = document.getElementById("favorite");
+				element.appendChild(para);
+			}
 		});
 	});
-
-	
 }
