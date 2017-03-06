@@ -8,11 +8,17 @@ var config = {
 
 var app = firebase.initializeApp(config);
 var db = app.database();
-//var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
 
+/*
+ * Called from SearchForCoffee.html
+ *
+ * Read search input box and list coffee with matching name.
+ * If search input box is blank, all coffees with be listed.
+ * Each name will be a link to the coffee_hunter.html with relevant data.
+ *
+ */
 function listCoffees() {
 	var input = document.getElementById("coffee").value;
-//	input = input.replace(/\s/g,'');
 	document.getElementById("div1").innerHTML = "";
 	if (input === "") {
 		db.ref('coffees').on('value', function(snapshot) {
@@ -152,20 +158,18 @@ function userSignup() {
 function googleLogin() {
 	firebase.auth().signInWithPopup(provider).then(function(result) {
 	console.log("During");
-  	// This gives you a Google Access Token. You can use it to access the Google API.
-  	var token = result.credential.accessToken;
-  	// The signed-in user info.
-  	var user = result.user;
-  	// ...
-		}).catch(function(error) {
-	  // Handle Errors here.
-	  var errorCode = error.code;
-	  var errorMessage = error.message;
-	  // The email of the user's account used.
-	  var email = error.email;
-	  // The firebase.auth.AuthCredential type that was used.
-	  var credential = error.credential;
-	  // ...
+  // This gives you a Google Access Token. You can use it to access the Google API.
+  var token = result.credential.accessToken;
+  // The signed-in user info.
+  var user = result.user;
+	}).catch(function(error) {
+	  	// Handle Errors here.
+	  	var errorCode = error.code;
+	  	var errorMessage = error.message;
+	  	// The email of the user's account used.
+	  	var email = error.email;
+	  	// The firebase.auth.AuthCredential type that was used.
+	  	var credential = error.credential;
 		});
 }
 
@@ -175,9 +179,6 @@ function userLogout() {
 		console.log('You have been logged out successfully!');
 		window.location.href = "./login.html";
 	} 
-	else {
-		// Do nothing
-	}
 }
 
 // Add realtime listener
@@ -187,9 +188,6 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 	} 
 	if (!firebaseUser && !window.location.href.includes("login")) {
 		window.location.href = "./login.html";
-	}
-	else {
-		// Do nothing
 	}
 }); 
 
