@@ -32,15 +32,20 @@ function listCoffees() {
 }
 
 function userAddFavorite() {
-	var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
-	var coffeename = document.getElementById("name").value;
-	db.ref('coffees').on('value', function(snapshot) {
-		snapshot.forEach(function(Snapshot) {
-			if (Snapshot.val().name === coffeename) {
-				ref.push(Snapshot.val());
-			}
+	if (confirm("Would you like to add this coffee to your favorites list?")) {
+		var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
+		var coffeename = document.getElementById("name").value;
+		db.ref('coffees').on('value', function(snapshot) {
+			snapshot.forEach(function(Snapshot) {
+				if (Snapshot.val().name === coffeename) {
+					ref.push(Snapshot.val());
+				}
+			});
 		});
-	});
+	}
+	else {
+		return false;
+	}
 }
 
 function userRemoveFavorite() {
