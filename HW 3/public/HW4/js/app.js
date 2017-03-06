@@ -56,7 +56,6 @@ function listCoffees() {
 }
 
 function listFavorite() {
-	//document.getElementById("div1").innerHTML = "";
 	var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
 	if (!firebase.auth().currentUser) {
 		console.log("Here");
@@ -239,7 +238,6 @@ function loadCoffee() {
 				if (Math.random() > 0.5) {
 					var coffeeimg = document.getElementById("coffeeimg");
        				coffeeimg.src = Snapshot.val().image_url;
-					//document.getElementById('coffeeimg').src = Snapshot.val().image_url;
 					document.getElementById('name').value = Snapshot.val().name;
 					document.getElementById('served').value = Snapshot.val().served;
 					document.getElementById('price').value = Snapshot.val().price;
@@ -254,7 +252,6 @@ function loadCoffee() {
 			snapshot.forEach(function(Snapshot) {
 				var coffeeimg = document.getElementById("coffeeimg");
        				coffeeimg.src = Snapshot.val().image_url;
-					//document.getElementById('coffeeimg').src = Snapshot.val().image_url;
 					document.getElementById('name').value = Snapshot.val().name;
 					document.getElementById('served').value = Snapshot.val().served;
 					document.getElementById('price').value = Snapshot.val().price;
@@ -275,7 +272,8 @@ function loadFavorite() {
  
 	ref.orderByChild("name").equalTo(name).on('value', function(snapshot) {
 		snapshot.forEach(function(Snapshot) {
-				//document.getElementById('coffeeimg').value = Snapshot.val().image_url;
+				var coffeeimg = document.getElementById("coffeeimg");
+       			coffeeimg.src = Snapshot.val().image_url;
 				document.getElementById('name').value = Snapshot.val().name;
 				document.getElementById('served').value = Snapshot.val().served;
 				document.getElementById('price').value = Snapshot.val().price;

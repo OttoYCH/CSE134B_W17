@@ -38,13 +38,13 @@ body {
 	padding: 5vw 5vh;
 	border: 2vw double #6C8EBF;
 	position: relative;
-	 top: 15vh;
+	top: 15vh;
 }
 
 #searchCoffee {
 	width: 100%;
 	height: 20%;
-	background: url(../coffeeBean.png) no-repeat scroll 2px 3px;
+	background: url(../Dummy/coffeeBean.png) no-repeat scroll 2px 3px;
 	background-size: 5vw;
 	background-position: 4vw;
 	padding-left: 8vw;
@@ -64,7 +64,7 @@ body {
 #coffeeStorage {
 	width: 100%;
 	height: 20%;
-	background: url(../coffeeBean.png) no-repeat scroll 2px 3px;
+	background: url(../Dummy/coffeeBean.png) no-repeat scroll 2px 3px;
 	background-size: 5vw;
 	background-position: 4vw;
 	padding-left: 8vw;
@@ -84,7 +84,7 @@ body {
 #shareFriend {
 	width: 100%;
 	height: 20%;
-	background: url(../coffeeBean.png) no-repeat scroll 2px 3px;
+	background: url(../Dummy/coffeeBean.png) no-repeat scroll 2px 3px;
 	background-size: 5vw;
 	background-position: 4vw;
 	padding-left: 8vw;
@@ -104,7 +104,7 @@ body {
 #btnLogout {
 	width: 100%;
 	height: 20%;
-	background: url(../coffeeBean.png) no-repeat scroll 2px 3px;
+	background: url(../Dummy/coffeeBean.png) no-repeat scroll 2px 3px;
 	background-size: 5vw;
 	background-position: 4vw;
 	padding-left: 8vw;
@@ -197,6 +197,22 @@ body {
 	width: 15vw;
 	height: 5vh;
 	background-color: #58B957; 
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 2vh;
+    font-family: "Helvetica";
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+#btnGoogle {
+	position: absolute;
+	top: -40px;
+	left: 120%;
+	width: 15vw;
+	height: 5vh;
+	background-color: grey; 
     border: none;
     color: white;
     text-align: center;
@@ -643,6 +659,14 @@ tr {
 
 }
 
+.btnListOut {	
+    background-color: #fffacd;
+    border-radius: 1vh;
+    color: red;
+    font-weight:bold;
+}
+
+/*
 .removeBtn {
     background-color:#DB524C;
     border-radius: 1vh;
@@ -650,6 +674,7 @@ tr {
     border: none;
     font-family: Helvetica;
 }
+*/
 
 .coffee_img {
 	text-align: center;
@@ -678,6 +703,17 @@ tr {
 
 .addbutton {
 	background-color: #58B957; 
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 2vh;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.removebutton {
+	background-color: #DB524C; 
     border: none;
     color: white;
     text-align: center;

@@ -8,16 +8,13 @@
     <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-database.js"></script>
-    <script src="https://unpkg.com/vue"></script>
-    <script src="https://unpkg.com/vuefire/dist/vuefire.js"></script>
-
     <title>Coffee-Dex</title> 
   </head>
 <body onload="loadFavorite()">
   <div class="page_container">
     
       <div class="coffee_img">
-        <img src="coffee_cup.jpg" width="100" height="150" alt="Coffee Cup" id="coffeeimg"> 
+        <img width="100" height="150" alt="Coffee Cup" id="coffeeimg"> 
       </div>
 
       <div class="infocontainer">
@@ -35,7 +32,7 @@
         </div>
         <br/> <br/> <br/>
         <label>Shop Location: 
-          <a href="#">Search Maps!</a> <img src="maps.png" width="15" height="15" alt="Maps" id="mapimg">
+          <a href="#">Search Maps!</a> <img src="./Dummy/maps.png" width="15" height="15" alt="Maps" id="mapimg">
         </label>
         <input type="text" class="large-input" id="location" readonly>
         <br/> 
@@ -51,17 +48,12 @@
 
       <div class="addcontainer">
 	      <button onclick="userUpdateFavorite()" class="addbutton">Update</button>
-        <button onclick="userRemoveFavorite()" class="addbutton">Remove</button>
+        <button onclick="userRemoveFavorite()" class="removebutton">Remove</button>
         <button onclick="location.href = './CoffeeStorage.html';" class="backbutton">Back</button>
       </div>
 
   </div>
-
-    <script src="app.js"></script>
-
+    <script src="./js/app.js"></script>
   </body>
-
-
-
 </html>
 
