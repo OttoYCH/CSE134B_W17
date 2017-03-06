@@ -25,7 +25,7 @@ function listCoffees() {
 				var node = document.createTextNode(Snapshot.val().name);
 				a_tag.appendChild(node);
 				var name = Snapshot.val().name;
-				a_tag.href = "./coffee_hunter.html?id="+name;
+				a_tag.href = "./coffee_hunter.html?"+name;
 				var element = document.getElementById("div1");
 				element.appendChild(para);
 			}
