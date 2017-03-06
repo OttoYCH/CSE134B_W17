@@ -262,7 +262,7 @@ function loadFavorites() {
 				document.getElementById('price').value = Snapshot.val().price;
 				document.getElementById('link').value = Snapshot.val().link;
 				document.getElementById('location').value = Snapshot.val().location;
-				document.getElementById('note').value = Snapshot.val().note;
+				document.getElementById('note').value = Snapshot.val().notes;
 		});
 	});
 }
