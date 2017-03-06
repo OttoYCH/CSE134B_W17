@@ -56,10 +56,8 @@ function listCoffees() {
 }
 
 function listFavorite() {
-	document.getElementById("div1").innerHTML = "";
-
+	//document.getElementById("div1").innerHTML = "";
 	var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
-	//var authData = db.getAuth();
 	if (!firebase.auth().currentUser) {
 		console.log("Here");
 	}
@@ -74,13 +72,14 @@ function listFavorite() {
 				var node = document.createTextNode(Snapshot.val().name);
 				a_tag.appendChild(node);
 				var name = Snapshot.val().name;
-				a_tag.href = "./CoffeeStorage.html?"+name;
-				var element = document.getElementById("div1");
+				a_tag.href = "./coffee_favorites.html?"+name+"&"+firebase.auth().currentUser.uid;
+				var element = document.getElementById("favorite");
 				element.appendChild(list);
 			}
 		});
 	});
 }
+
 
 function userAddFavorite() {
 	if (confirm("Would you like to add this coffee to your favorites list?")) {
@@ -249,24 +248,21 @@ function loadCoffee() {
 	}
 }
 
-
-function listFavorites() {
-	console.log(firebase.auth().currentUser);
-	var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
-	ref.on('value', function(snapshot) {
+// loads user favorite coffee based on the id
+function loadFavorites() {
+	var params = location.search.substring(1).split("&");
+	var name = params[0].replace("%20", " ");
+	var userId = params[1];
+	var ref = db.ref('users/' + userId + '/favorites');
+ 
+	ref.orderByChild("name").equalTo(name).on('value', function(snapshot) {
 		snapshot.forEach(function(Snapshot) {
-			if (typeof Snapshot.val().name !== "undefined") {
-				console.log(Snapshot.val().name);
-				var para = document.createElement("p");
-				var a_tag = document.createElement("a");
-				para.appendChild(a_tag);
-				var node = document.createTextNode(Snapshot.val().name);
-				a_tag.appendChild(node);
-				var name = Snapshot.val().name;
-				a_tag.href = "./coffee_favorites.html?"+name;
-				var element = document.getElementById("favorite");
-				element.appendChild(para);
-			}
+				document.getElementById('name').value = Snapshot.val().name;
+				document.getElementById('served').value = Snapshot.val().served;
+				document.getElementById('price').value = Snapshot.val().price;
+				document.getElementById('link').value = Snapshot.val().link;
+				document.getElementById('location').value = Snapshot.val().location;
+				document.getElementById('note').value = Snapshot.val().note;
 		});
 	});
 }
