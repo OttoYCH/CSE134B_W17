@@ -33,7 +33,7 @@ function listCoffees() {
 
 function userAddFavorite() {
 	var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
-	var coffeename = document.getElementById("addFav").value;
+	var coffeename = document.getElementById("name").value;
 	db.ref('coffees').on('value', function(snapshot) {
 		snapshot.forEach(function(Snapshot) {
 			if (Snapshot.val().name === coffeename) {
