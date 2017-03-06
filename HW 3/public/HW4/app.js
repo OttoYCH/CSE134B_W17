@@ -99,52 +99,63 @@ function userAddFavorite() {
 }
 
 function userRemoveFavorite() {
-	var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
-	var coffeename = document.getElementById("remFav").value;
-	ref.on('value', function(snapshot) {
-		snapshot.forEach(function(Snapshot) {
-			if (Snapshot.val().name === coffeename) {			
-				remRef = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites/' + Snapshot.key);
-				remRef.set(null)
-					.then(function() {
-			    	console.log("Remove succeeded.")
-			    	location.reload();
-			  	})
-			  	.catch(function(error) {
-			    	console.log("Remove failed: " + error.message)
-			  	});
-			}
+	if (confirm("Would you like to remove this coffee from your favorites list?")) {
+		var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
+		var coffeename = document.getElementById("name").value;
+		ref.on('value', function(snapshot) {
+			snapshot.forEach(function(Snapshot) {
+				if (Snapshot.val().name === coffeename) {			
+					remRef = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites/' + Snapshot.key);
+					remRef.set(null)
+						.then(function() {
+				    	console.log("Remove succeeded.")
+				    	window.location.href = './CoffeeStorage.html'
+				    //	location.reload();
+				  	})
+				  	.catch(function(error) {
+				    	console.log("Remove failed: " + error.message)
+				  	});
+				}
+			});
 		});
-	});
+	}
+	else {
+		return false;
+	}
 }
 
 
 function userUpdateFavorite() {
-	var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
-	var coffeename = document.getElementById("remFav").value;
-	ref.on('value', function(snapshot) {
-		snapshot.forEach(function(Snapshot) {
-			if (Snapshot.val().name === coffeename) {			
-				remRef = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites/' + Snapshot.key);
-				remRef.set({
-			    link: Snapshot.val().link,
-			    location: Snapshot.val().location,
-			    name: document.getElementById("updFav").value,
-			    notes: Snapshot.val().notes,
-			    price: Snapshot.val().price,
-			    rating: Snapshot.val().rating,
-			    served: Snapshot.val().served
-			  })
-					.then(function() {
-			    	console.log("Update succeeded.")
-			    	location.reload();
-			  	})
-			  	.catch(function(error) {
-			    	console.log("Update failed: " + error.message)
-			  	});
-			}
+	if (confirm("Would you like to update your notes for this coffee?")) {
+		var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
+		var coffeename = document.getElementById("name").value;
+		ref.on('value', function(snapshot) {
+			snapshot.forEach(function(Snapshot) {
+				if (Snapshot.val().name === coffeename) {			
+					remRef = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites/' + Snapshot.key);
+					remRef.set({
+				    link: Snapshot.val().link,
+				    location: Snapshot.val().location,
+				    name: Snapshot.val().name,
+				    notes: document.getElementById("note").value,
+				    price: Snapshot.val().price,
+				    rating: Snapshot.val().rating,
+				    served: Snapshot.val().served
+				  })
+						.then(function() {
+				    	console.log("Update succeeded.")
+				    	location.reload();
+				  	})
+				  	.catch(function(error) {
+				    	console.log("Update failed: " + error.message)
+				  	});
+				}
+			});
 		});
-	});
+	}
+	else {
+		return false;
+	}
 }
 
 var provider = new firebase.auth.GoogleAuthProvider();
@@ -249,7 +260,7 @@ function loadCoffee() {
 }
 
 // loads user favorite coffee based on the id
-function loadFavorites() {
+function loadFavorite() {
 	var params = location.search.substring(1).split("&");
 	var name = params[0].replace("%20", " ");
 	var userId = params[1];
