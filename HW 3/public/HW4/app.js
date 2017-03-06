@@ -223,3 +223,24 @@ function loadCoffee() {
 	}
 }
 
+
+function listFavorites() {
+	console.log(firebase.auth().currentUser);
+	var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
+	ref.on('value', function(snapshot) {
+		snapshot.forEach(function(Snapshot) {
+			if (typeof Snapshot.val().name !== "undefined") {
+				console.log(Snapshot.val().name);
+				var para = document.createElement("p");
+				var a_tag = document.createElement("a");
+				para.appendChild(a_tag);
+				var node = document.createTextNode(Snapshot.val().name);
+				a_tag.appendChild(node);
+				var name = Snapshot.val().name;
+				a_tag.href = "./coffee_favorites.html?"+name;
+				var element = document.getElementById("favorite");
+				element.appendChild(para);
+			}
+		});
+	});
+}
