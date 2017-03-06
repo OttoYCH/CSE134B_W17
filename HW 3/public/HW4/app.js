@@ -33,6 +33,33 @@ function listCoffees() {
 	});
 }
 
+function listFavorite() {
+	document.getElementById("div1").innerHTML = "";
+
+	var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
+	//var authData = db.getAuth();
+	if (!firebase.auth().currentUser) {
+		console.log("Here");
+	}
+	
+	ref.on('value', function(snapshot) {
+		snapshot.forEach(function(Snapshot) {
+			if (typeof Snapshot.val().name !== "undefined") {
+				console.log(Snapshot.val().name);
+				var list = document.createElement("li");
+				var a_tag = document.createElement("a");
+				list.appendChild(a_tag);
+				var node = document.createTextNode(Snapshot.val().name);
+				a_tag.appendChild(node);
+				var name = Snapshot.val().name;
+				a_tag.href = "./CoffeeStorage.html?"+name;
+				var element = document.getElementById("div1");
+				element.appendChild(list);
+			}
+		});
+	});
+}
+
 function userAddFavorite() {
 	var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
 	var coffeename = document.getElementById("name").value;
