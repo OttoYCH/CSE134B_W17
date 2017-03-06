@@ -12,11 +12,11 @@ var db = app.database();
 
 function listCoffees() {
 	var input = document.getElementById("coffee").value;
+//	input = input.replace(/\s/g,'');
 	document.getElementById("div1").innerHTML = "";
-	db.ref('coffees').orderByChild("name").equalTo(input).on('value', function(snapshot) {
-		snapshot.forEach(function(Snapshot) {
-			if (typeof Snapshot.val().name !== "undefined") {
-				console.log(Snapshot.val().name);
+	if (input === "") {
+		db.ref('coffees').on('value', function(snapshot) {
+			snapshot.forEach(function(Snapshot) {
 				var para = document.createElement("p");
 				var a_tag = document.createElement("a");
 				para.appendChild(a_tag);
@@ -26,9 +26,26 @@ function listCoffees() {
 				a_tag.href = "./coffee_hunter.html?"+name;
 				var element = document.getElementById("div1");
 				element.appendChild(para);
-			}
+			});
 		});
-	});
+	}
+	else {
+		db.ref('coffees').orderByChild("name").equalTo(input).on('value', function(snapshot) {
+			snapshot.forEach(function(Snapshot) {
+				if (typeof Snapshot.val().name !== "undefined") {
+					var para = document.createElement("p");
+					var a_tag = document.createElement("a");
+					para.appendChild(a_tag);
+					var node = document.createTextNode(Snapshot.val().name);
+					a_tag.appendChild(node);
+					var name = Snapshot.val().name;
+					a_tag.href = "./coffee_hunter.html?"+name;
+					var element = document.getElementById("div1");
+					element.appendChild(para);
+				}
+			});
+		});
+	}
 }
 
 function userAddFavorite() {
