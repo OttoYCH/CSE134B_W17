@@ -237,6 +237,7 @@ function loadCoffee() {
 		db.ref('coffees').on('value', function(snapshot) {
 			snapshot.forEach(function(Snapshot) {
 				if (Math.random() > 0.5) {
+					//document.getElementById('coffeeimg').value = Snapshot.val().image_url;
 					document.getElementById('name').value = Snapshot.val().name;
 					document.getElementById('served').value = Snapshot.val().served;
 					document.getElementById('price').value = Snapshot.val().price;
@@ -249,6 +250,7 @@ function loadCoffee() {
 	else {
 		db.ref('coffees').orderByChild("name").equalTo(name).on('value', function(snapshot) {
 			snapshot.forEach(function(Snapshot) {
+					//document.getElementById('coffeeimg').value = Snapshot.val().image_url;
 					document.getElementById('name').value = Snapshot.val().name;
 					document.getElementById('served').value = Snapshot.val().served;
 					document.getElementById('price').value = Snapshot.val().price;
@@ -268,6 +270,7 @@ function loadFavorite() {
  
 	ref.orderByChild("name").equalTo(name).on('value', function(snapshot) {
 		snapshot.forEach(function(Snapshot) {
+				//document.getElementById('coffeeimg').value = Snapshot.val().image_url;
 				document.getElementById('name').value = Snapshot.val().name;
 				document.getElementById('served').value = Snapshot.val().served;
 				document.getElementById('price').value = Snapshot.val().price;
