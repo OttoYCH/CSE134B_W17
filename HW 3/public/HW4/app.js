@@ -242,6 +242,7 @@ function loadCoffee() {
 					document.getElementById('price').value = Snapshot.val().price;
 					document.getElementById('link').value = Snapshot.val().link;
 					document.getElementById('location').value = Snapshot.val().location;
+					document.getElementById('coffeeimg').value = Snapshot.val().image_url;
 				}
 			});
 		});	
@@ -254,6 +255,8 @@ function loadCoffee() {
 					document.getElementById('price').value = Snapshot.val().price;
 					document.getElementById('link').value = Snapshot.val().link;
 					document.getElementById('location').value = Snapshot.val().location;
+					console.log(Snapshot.val().image_url);
+					document.getElementById('coffeeimg').value = Snapshot.val().image_url;
 			});
 		});
 	}
