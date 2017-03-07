@@ -57,14 +57,9 @@ function listCoffees() {
 
 function listFavorite() {
 	var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
-	if (!firebase.auth().currentUser) {
-		console.log("Here");
-	}
-	
 	ref.on('value', function(snapshot) {
 		snapshot.forEach(function(Snapshot) {
 			if (typeof Snapshot.val().name !== "undefined") {
-				console.log(Snapshot.val().name);
 				var list = document.createElement("li");
 				var a_tag = document.createElement("a");
 				list.appendChild(a_tag);
@@ -88,6 +83,8 @@ function userAddFavorite() {
 			snapshot.forEach(function(Snapshot) {
 				if (Snapshot.val().name === coffeename) {
 					ref.push(Snapshot.val());
+					console.log("Add succeeded.");
+					window.location.href = './SearchForCoffee.html'
 				}
 			});
 		});
@@ -107,12 +104,12 @@ function userRemoveFavorite() {
 					remRef = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites/' + Snapshot.key);
 					remRef.set(null)
 						.then(function() {
-				    	console.log("Remove succeeded.")
+				    	console.log("Remove succeeded.");
 				    	window.location.href = './CoffeeStorage.html'
 				    //	location.reload();
 				  	})
 				  	.catch(function(error) {
-				    	console.log("Remove failed: " + error.message)
+				    	console.log("Remove failed: " + error.message);
 				  	});
 				}
 			});
@@ -142,11 +139,11 @@ function userUpdateFavorite() {
 				    served: Snapshot.val().served
 				  })
 						.then(function() {
-				    	console.log("Update succeeded.")
+				    	console.log("Update succeeded.");
 				    	location.reload();
 				  	})
 				  	.catch(function(error) {
-				    	console.log("Update failed: " + error.message)
+				    	console.log("Update failed: " + error.message);
 				  	});
 				}
 			});
@@ -257,7 +254,6 @@ function loadCoffee() {
 					document.getElementById('price').value = Snapshot.val().price;
 					document.getElementById('link').value = Snapshot.val().link;
 					document.getElementById('location').value = Snapshot.val().location;
-					console.log(Snapshot.val().image_url);
 			});
 		});
 	}
