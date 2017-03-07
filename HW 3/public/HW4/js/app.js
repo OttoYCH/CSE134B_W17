@@ -56,10 +56,12 @@ function listCoffees() {
 }
 
 function listFavorite() {
+	document.getElementById("favorite").innerHTML = "";
 	var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
 	ref.on('value', function(snapshot) {
 		snapshot.forEach(function(Snapshot) {
 			if (typeof Snapshot.val().name !== "undefined") {
+
 				var list = document.createElement("li");
 				var a_tag = document.createElement("a");
 				list.appendChild(a_tag);
