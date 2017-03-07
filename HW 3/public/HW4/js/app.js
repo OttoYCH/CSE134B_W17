@@ -127,13 +127,11 @@ function userUpdateFavorite() {
 		var coffeename = document.getElementById("name").value;
 		ref.on('value', function(snapshot) {
 			snapshot.forEach(function(Snapshot) {
-				var coffeeimg = document.getElementById("coffeeimg");
- 				imageurl = Snapshot.val().image_url;
- 				
+				
 				if (Snapshot.val().name === coffeename) {			
 					remRef = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites/' + Snapshot.key);
 					remRef.set({
-					image_url: imageurl, 
+					image_url: Snapshot.val().image_url, 
 				    link: Snapshot.val().link,
 				    location: Snapshot.val().location,
 				    name: Snapshot.val().name,
