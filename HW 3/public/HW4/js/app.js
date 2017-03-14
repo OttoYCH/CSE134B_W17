@@ -13,7 +13,7 @@ var db = app.database();
 /*
  * Called from SearchForCoffee.html
  *
- * Read search input box and list coffee with matching name.
+ * Read search input box and list coffee(s) with matching name.
  * If search input box is blank, all coffees with be listed.
  * Each name will be a link to the coffee_hunter.html with relevant data.
  *
@@ -55,6 +55,13 @@ function listCoffees() {
 	}
 }
 
+/*
+ * Called from CoffeeStorage.html 
+ *
+ * Lists all coffees in user favorites database.
+ * Each name will be a link to the coffee_hunter.html with relevant data.
+ *
+ */
 function listFavorite() {
 	document.getElementById("favorite").innerHTML = "";
 	var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
@@ -76,7 +83,13 @@ function listFavorite() {
 	});
 }
 
-
+/*
+ * Called from coffee_hunter.html 
+ *
+ * Adds a coffee to user favorites database.
+ * User will be prompted to confirm before add is initiated.
+ *
+ */
 function userAddFavorite() {
 	if (confirm("Would you like to add this coffee to your favorites list?")) {
 		var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
@@ -96,6 +109,13 @@ function userAddFavorite() {
 	}
 }
 
+/*
+ * Called from coffee_favorites.html 
+ *
+ * Removes a coffee from user favorites database.
+ * User will be prompted to confirm before remove is initiated.
+ *
+ */
 function userRemoveFavorite() {
 	if (confirm("Would you like to remove this coffee from your favorites list?")) {
 		var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
@@ -122,7 +142,13 @@ function userRemoveFavorite() {
 	}
 }
 
-
+/*
+ * Called from coffee_favorites.html
+ *
+ * Updates a coffee in user favorites database with given notes.
+ * User will be prompted to confirm before update is initiated.
+ *
+ */
 function userUpdateFavorite() {
 	if (confirm("Would you like to update your notes for this coffee?")) {
 		var ref = db.ref('users/' + firebase.auth().currentUser.uid + '/favorites');
@@ -165,7 +191,13 @@ const txtPassword = document.getElementById('txtPassword');
 const btnLogin = document.getElementById('btnLogin');
 const btnSignup = document.getElementById('btnSignup');
 
-// Add login event
+/*
+ * Called from login.html
+ *
+ * Attempts to log user in by querying Firebase user database.
+ * If the email is poorly formatted or the user is not registered, an error will be thrown.
+ *
+ */
 function userLogin() {
 	// Get email and password
 	const email = txtEmail.value;
@@ -177,7 +209,14 @@ function userLogin() {
 	promise.catch(e => console.log(e.message));
 }
 
-// Add signup event
+/*
+ * Called from login.html
+ *
+ * Attempts to register a new user by adding email/password combination to Firebase user database.
+ * If the email is poorly formatted, an error will be thrown.
+ * Upon successful registration, the user will me alerted and automatically logged in.
+ *
+ */
 function userSignup() {
 	// Get email and password
 	const email = txtEmail.value;
@@ -192,7 +231,14 @@ function userSignup() {
 	});
 } 
 
-// Add login event
+/*
+ * Called from login.html
+ *
+ * Registers a new user or logs in with an existing user using the Google API.
+ * Google account will be either added to or searched for in Firebase user database.
+ * Upon successful registration, the user will automatically logged in.
+ *
+ */
 function googleLogin() {
 	firebase.auth().signInWithPopup(provider).then(function(result) {
 	console.log("During");
@@ -211,6 +257,12 @@ function googleLogin() {
 		});
 }
 
+/*
+ * Called from main_page.html
+ *
+ * Logs current user out with Firebase API call.
+ *
+ */
 function userLogout() {
 	if (confirm('Do you want to logout?')) {
 		firebase.auth().signOut();
@@ -219,7 +271,15 @@ function userLogout() {
 	} 
 }
 
-// Add realtime listener
+/*
+ * Real-time listener
+ *
+ * Constantly checks to see if current user is logged in.
+ * If user is logged in and/or the site remembers them, 
+ * they will automatically bypass the login page.
+ * If user is not logged in, they will be returned to the login page.
+ *
+ */
 firebase.auth().onAuthStateChanged(firebaseUser => {
 	if (firebaseUser && window.location.href.includes("login")) {
 		window.location.href = "./main_page.html";
@@ -229,7 +289,12 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 	}
 }); 
 
-// Loads things into coffee hunter from the database
+/*
+ * Called from coffee_hunter.html
+ *
+ * Loads fields, based on a given coffee name, from the constrained coffee database.
+ *
+ */
 function loadCoffee() {
 	var temp = location.search.substring(1);
 	var name = temp.replace("%20", " ");
@@ -263,7 +328,12 @@ function loadCoffee() {
 	}
 }
 
-// loads user favorite coffee based on the id
+/*
+ * Called from coffee_favorites.html
+ *
+ * Loads fields, based on a given coffee name, from the user favorite database.
+ *
+ */
 function loadFavorite() {
 	var params = location.search.substring(1).split("&");
 	var name = params[0].replace("%20", " ");
