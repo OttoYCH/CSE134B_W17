@@ -6,8 +6,14 @@ var config = {
 	storageBucket: "coffee-dex-a7a8d.appspot.com",  
     };
 
+// Get provider and authentication elements
 var app = firebase.initializeApp(config);
 var db = app.database();
+var provider = new firebase.auth.GoogleAuthProvider();
+const txtEmail = document.getElementById('txtEmail');
+const txtPassword = document.getElementById('txtPassword');
+const btnLogin = document.getElementById('btnLogin');
+const btnSignup = document.getElementById('btnSignup');
 
 
 /*
@@ -68,7 +74,6 @@ function listFavorite() {
 	ref.on('value', function(snapshot) {
 		snapshot.forEach(function(Snapshot) {
 			if (typeof Snapshot.val().name !== "undefined") {
-
 				var list = document.createElement("li");
 				var a_tag = document.createElement("a");
 				list.appendChild(a_tag);
@@ -128,7 +133,6 @@ function userRemoveFavorite() {
 						.then(function() {
 				    	console.log("Remove succeeded.");
 				    	window.location.href = './CoffeeStorage.html'
-				    //	location.reload();
 				  	})
 				  	.catch(function(error) {
 				    	console.log("Remove failed: " + error.message);
@@ -184,13 +188,6 @@ function userUpdateFavorite() {
 	}
 }
 
-var provider = new firebase.auth.GoogleAuthProvider();
-// Get elements
-const txtEmail = document.getElementById('txtEmail');
-const txtPassword = document.getElementById('txtPassword');
-const btnLogin = document.getElementById('btnLogin');
-const btnSignup = document.getElementById('btnSignup');
-
 /*
  * Called from login.html
  *
@@ -199,12 +196,9 @@ const btnSignup = document.getElementById('btnSignup');
  *
  */
 function userLogin() {
-	// Get email and password
 	const email = txtEmail.value;
 	const password = txtPassword.value;
 	const auth = firebase.auth();
-
-	// Sign in
 	const promise = auth.signInWithEmailAndPassword(email, password);
 	promise.catch(e => console.log(e.message));
 }
@@ -218,12 +212,9 @@ function userLogin() {
  *
  */
 function userSignup() {
-	// Get email and password
 	const email = txtEmail.value;
 	const password = txtPassword.value;
 	const auth = firebase.auth();
-
-	// Sign in
 	const promise = auth.createUserWithEmailAndPassword(email, password);
 	promise.catch(e => console.log(e.message));
 	promise.then(firebaseUser => {
@@ -242,17 +233,12 @@ function userSignup() {
 function googleLogin() {
 	firebase.auth().signInWithPopup(provider).then(function(result) {
 	console.log("During");
-  // This gives you a Google Access Token. You can use it to access the Google API.
   var token = result.credential.accessToken;
-  // The signed-in user info.
   var user = result.user;
 	}).catch(function(error) {
-	  	// Handle Errors here.
 	  	var errorCode = error.code;
 	  	var errorMessage = error.message;
-	  	// The email of the user's account used.
 	  	var email = error.email;
-	  	// The firebase.auth.AuthCredential type that was used.
 	  	var credential = error.credential;
 		});
 }
@@ -339,7 +325,6 @@ function loadFavorite() {
 	var name = params[0].replace("%20", " ");
 	var userId = params[1];
 	var ref = db.ref('users/' + userId + '/favorites');
- 
 	ref.orderByChild("name").equalTo(name).on('value', function(snapshot) {
 		snapshot.forEach(function(Snapshot) {
 				var coffeeimg = document.getElementById("coffeeimg");
