@@ -23,17 +23,17 @@ var filesToCache = [
        
        '/css/coffee.css',
        
-       '/Dummy/login_coffee.png',
-       '/Dummy/americano.jpg',
-       '/Dummy/cappuccino.png',
-       '/Dummy/caramel macchiato.jpg',
-       '/Dummy/coffee_cup.jpg',
-       '/Dummy/coffeeBean.png',
-       '/Dummy/espresso.jpg',
-       '/Dummy/maps.png',
-       '/Dummy/phone.png',
-       '/Dummy/vanilla latte.jpg',
-       '/Dummy/white mocha.jpg',
+       'HW4/Dummy/login_coffee.png',
+       'HW4/Dummy/americano.jpg',
+       'HW4/Dummy/cappuccino.png',
+       'HW4/Dummy/caramel macchiato.jpg',
+       'HW4/Dummy/coffee_cup.jpg',
+       'HW4/Dummy/coffeeBean.png',
+       'HW4/Dummy/espresso.jpg',
+       'HW4/Dummy/maps.png',
+       'HW4/Dummy/phone.png',
+       'HW4/Dummy/vanilla latte.jpg',
+       'HW4/Dummy/white mocha.jpg',
 ]
 
 self.addEventListener('install', function (e) {
