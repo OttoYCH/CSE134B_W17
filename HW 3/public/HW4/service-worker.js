@@ -8,7 +8,7 @@ var cacheName = 'coffeePWA-1.5'
 var filesToCache = [
        '/HW4/main_page.html', 
        '/HW4/coffee_favorites.html',       
-       '/HW4/coffe_hunter.html',       
+       '/HW4/coffee_hunter.html',       
        '/HW4/CoffeeStorage.html',       
        '/HW4/EnterPhoneNumber.html',       
        '/HW4/login.html',       
