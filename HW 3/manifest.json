@@ -13,6 +13,7 @@
                 "type": "image/png"
            }
      ],
-     "start_url": "/main_page.html",
-     "display": "standalone",
+     "start_url": "./public/HW4/login.html",
+     "display": "standalone"
+
 }
