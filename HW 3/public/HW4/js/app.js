@@ -74,7 +74,6 @@ function listFavorite() {
 	ref.on('value', function(snapshot) {
 		snapshot.forEach(function(Snapshot) {
 			if (typeof Snapshot.val().name !== "undefined") {
-
 				var list = document.createElement("li");
 				var a_tag = document.createElement("a");
 				list.appendChild(a_tag);
@@ -134,7 +133,6 @@ function userRemoveFavorite() {
 						.then(function() {
 				    	console.log("Remove succeeded.");
 				    	window.location.href = './CoffeeStorage.html'
-				    //	location.reload();
 				  	})
 				  	.catch(function(error) {
 				    	console.log("Remove failed: " + error.message);
@@ -327,7 +325,6 @@ function loadFavorite() {
 	var name = params[0].replace("%20", " ");
 	var userId = params[1];
 	var ref = db.ref('users/' + userId + '/favorites');
- 
 	ref.orderByChild("name").equalTo(name).on('value', function(snapshot) {
 		snapshot.forEach(function(Snapshot) {
 				var coffeeimg = document.getElementById("coffeeimg");
