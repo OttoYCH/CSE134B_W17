@@ -196,7 +196,7 @@ body {
 	left: 120%;
 	width: 15vw;
 	height: 5vh;
-	background-color: #58B957; 
+	background-color: green; 
     border: none;
     color: white;
     text-align: center;
@@ -212,7 +212,7 @@ body {
 	left: 120%;
 	width: 15vw;
 	height: 5vh;
-	background-color: grey; 
+	background-color: black; 
     border: none;
     color: white;
     text-align: center;
@@ -228,7 +228,7 @@ body {
 	left: 120%;
 	width: 15vw;
 	height: 5vh;
-	background-color: lightblue; 
+	background-color: blue; 
     border: none;
     color: white;
     text-align: center;
