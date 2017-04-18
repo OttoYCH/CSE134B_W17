@@ -1,17 +1,103 @@
 /* This is body for all pages */
-body {
+/*body {
 	background-color: rgb(255, 255, 255);
+}*/
+
+.login_page {
+    /*background-image: url(../Dummy/login_bg.png);
+    opacity: 0.75;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;*/
 }
 
-.page_container {
-	padding-top: 15px;
+#bg {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#login_bg {
+    /*background-image: url(../Dummy/login_bg.png);
+    opacity: 0.75;*/
+    /*-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;*/
+    /*position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;*/
+    
+}
+
+#logo img {
+    max-width: 80%;
+    height: auto !important;
+}
+
+#loginimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logo h1 {
+    text-align: center;
+	font-size: 2vw;
+	font-weight: bold;
+	font-family: "Comic Sans MS";
+	color: #FFFAFA;
+}
+
+#txtEmail {
+    width: 70%;
+}
+
+#txtPassword {
+    width: 70%;
+}
+
+.row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+.row > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+    color: #C71585;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+}
+
+
+.login_page {
+    padding-top: 15px;
 	padding-bottom: 15px;
 	padding-right: 15px;
-  padding-left: 15px;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-right: auto;
-  margin-left: auto;
+    padding-left: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    min-width: 600px;
+    /*height: auto;*/
 }
 
 .centered {
@@ -191,48 +277,48 @@ body {
 }
 
 #btnLogin {
-	position: absolute;
+	/*position: absolute;
 	top: 15px;
 	left: 120%;
 	width: 15vw;
-	height: 5vh;
-	background-color: green; 
+	height: 5vh;*/
+	background-color: #007A06; 
     border: none;
     color: white;
     text-align: center;
-    font-size: 2vh;
+    /*font-size: 2vh;*/
     font-family: "Helvetica";
     font-weight: bold;
     border-radius: 4px;
 }
 
 #btnGoogle {
-	position: absolute;
+	/*position: absolute;
 	top: -20px;
 	left: 120%;
 	width: 15vw;
-	height: 5vh;
-	background-color: black; 
+	height: 5vh;*/
+	background-color: #BE3D0E; 
     border: none;
     color: white;
     text-align: center;
-    font-size: 2vh;
+    /*font-size: 2vh;*/
     font-family: "Helvetica";
     font-weight: bold;
     border-radius: 4px;
 }
 
 #btnSignup {
-	position: absolute;
+	/*position: absolute;
 	top: 50px;
 	left: 120%;
 	width: 15vw;
-	height: 5vh;
-	background-color: darkred; 
+	height: 5vh;*/
+	background-color: #126FA1; 
     border: none;
     color: white;
     text-align: center;
-    font-size: 2vh;
+    /*font-size: 2vh;*/
     font-family: "Helvetica";
     font-weight: bold;
     border-radius: 4px;
