@@ -9,6 +9,10 @@
     min-height: 100%;
 }
 
+.btn_class {
+    display: inline-block;
+}
+
 #headline {
     opacity: 1;
     font-family: Impact;

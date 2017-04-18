@@ -25,7 +25,7 @@
                     <h1>Coffee-Dex</h1>
                 </div>
                 <div class="col-sm-6" id="user_info">
-                    <form>
+                    
                         <div class="form-group">       
                             <img src="./Dummy/mail_icon.png" id="email_icon"><label for="txtEmail" id="label_email">Email</label>
                             <input type="email" class="form-control" id="txtEmail" placeholder="Enter Email" required />
@@ -39,19 +39,23 @@
                             <span class="psw"> <a href="./reset_password.html">Forgot password?</a></span>
                         </div>
                         
-                        <button class="btn btn-default" id="btnLogin" onclick="userLogin()">Login</button>
-                        <button class="btn btn-default" id="btnSignup" onclick="userSignup()">Sign Up</button>
-                        <button class="btn btn-default" id="btnGoogle" onclick="googleLogin()">Google Sign-In</button>
+                        <div class="btn_class">
+                            <button class="btn btn-default" id="btnLogin" onclick="userLogin()">Login</button>
+                            <button class="btn btn-default" id="btnSignup" onclick="userSignup()">Sign Up</button>
+                            <button class="btn btn-default" id="btnGoogle" onclick="googleLogin()">Google Sign-In</button>
+                        </div>
                     
-                    </form>
                 </div>
             <div class="col-sm-2" id="dummy_col">
             </div>
             </div>
-        </div>
-        <div id="copy">
+            
+            <div id="copy">
             &copy; Coffee-Dex UC San Diego 2017
+            </div>
         </div>
+        
+        <script src="./js/app.min.js"></script>
         <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('./service-worker.js').then(function() { 
@@ -59,7 +63,6 @@
              });
         }
         </script>
-        <script src="./js/app.min.js"></script>
     </body>
     
 </html>

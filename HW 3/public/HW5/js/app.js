@@ -3,13 +3,14 @@ var config = {
 	apiKey: "AIzaSyA8wmK8-privQ9gc8wiYvsETpYlHLiBGJ8",
 	authDomain: "coffee-dex-a7a8d.firebaseapp.com",
 	databaseURL: "https://coffee-dex-a7a8d.firebaseio.com",
-	storageBucket: "coffee-dex-a7a8d.appspot.com",  
+	storageBucket: "coffee-dex-a7a8d.appspot.com"
     };
 
 // Get provider and authentication elements
 var app = firebase.initializeApp(config);
 var db = app.database();
 var provider = new firebase.auth.GoogleAuthProvider();
+provider.addScope('https://www.googleapis.com/auth/plus.login');
 const txtEmail = document.getElementById('txtEmail');
 const txtPassword = document.getElementById('txtPassword');
 const btnLogin = document.getElementById('btnLogin');
