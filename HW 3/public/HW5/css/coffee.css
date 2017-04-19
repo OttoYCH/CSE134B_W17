@@ -511,18 +511,6 @@ tr {
     font-size: 2vh;
 }
 
-.backBtn {
-	position: absolute;
-	top:180%;
-	left:110%;
-    background-color: #EEEEEE;
-    border-radius: 1vh;
-    color: white;
-    width: 16vw;
-    height:10vh;
-    font-size: 2vh;
-}
-
 .sharefriend {
 	position: absolute;
 	top: 30%;
@@ -694,7 +682,7 @@ tr {
     font-weight:bold;
 }
 
-/*
+
 .removeBtn {
     background-color:#DB524C;
     border-radius: 1vh;
@@ -702,7 +690,7 @@ tr {
     border: none;
     font-family: Helvetica;
 }
-*/
+
 
 .coffee_img {
 	text-align: center;
@@ -729,31 +717,32 @@ tr {
     border-radius: 4px;
 }
 
-.addbutton {
-	background-color: #58B957; 
-    border: none;
+#addBtn {
+    background-color:#58B957;
+    border-radius: 1vh;
     color: white;
-    text-align: center;
-    font-size: 2vh;
-    font-family: "Comic Sans MS";
-    font-weight: bold;
-    border-radius: 4px;
+    font-weight:bold;
+    width: 40%;
+    
+}
+
+#orderBtn {
+    background-color:#ff9900;
+    border-radius: 1vh;
+    color: white;
+    font-weight:bold;
+    width: 15%;
+}
+
+#orderBtn:hover {
+    background-color:indianred;
+    color:yellow;
 }
 
 .removebutton {
 	background-color: #DB524C; 
     border: none;
     color: white;
-    text-align: center;
-    font-size: 2vh;
-    font-family: "Comic Sans MS";
-    font-weight: bold;
-    border-radius: 4px;
-}
-
-.backbutton {
-	background-color: none; 
-    border: none;
     text-align: center;
     font-size: 2vh;
     font-family: "Comic Sans MS";
@@ -892,33 +881,3 @@ tr {
     height: 8em;
     margin: 0 auto;
 }
-/*
-.rating:not(old) > input {
-	margin-right: -100%;
-	opacity:0;
-}
-
-.rating:not(old) > label {
-	display:block;
-	float:right;
-	position:relative;
-	background:url('star-off.svg');
-	background-size:contain;
-}
-
-.rating:not(old) > label:before {
-	content:'';
-	display:block;
-	width:1.5em;
-	height:1.5em;
-	background:url('star-on.svg');
-	background-size:contain;
-	opacity:0;
-}
-
-.rating:not(old) > label:hover:before,
-.rating:not(old) > label:hover ~ label:before,
-.rating:not(:hover) > :checked ~ label:before {
-	opacity:1,
-}
-*/
