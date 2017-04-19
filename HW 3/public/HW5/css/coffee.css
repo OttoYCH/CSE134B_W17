@@ -637,17 +637,10 @@ tr {
     color: black;
     font-weight:bold;
     width: 40%;
-    
 }
 
 .btnGroup {
     display: inline-block;
-}
-
-.StoragePage {
-	position: absolute;
-	top:35%;
-	left:15%;
 }
 
 .StorageList p {
@@ -666,20 +659,23 @@ tr {
 	color:#EEEEEE;
 }
 
-.QPBtn {
+#compareBtn {
 	background-color:#008CFF;
     border-radius: 1vh;
     color: white;
-    border:none;
-    font-family: Helvetica;
-
+    border:4px;
+    border-color:#52527a;
+    font-weight:bold;
+    width: 55%;
 }
 
-.btnListOut {	
+#listOutBtn {
     background-color: #fffacd;
     border-radius: 1vh;
-    color: red;
+    color: #ff1a75;
     font-weight:bold;
+    width: 80%;
+    margin: 0 auto;
 }
 
 
@@ -767,8 +763,6 @@ tr {
 	border: solid 1px lightblue;
 	text-align: left;        
 	font-family:Courier;
-	/*width:20vw;
-	height:5vw;*/
 }
 
 .large-input {
@@ -836,11 +830,11 @@ tr {
   margin-top: -50px;
   margin-left: -100px;
 }
-
+/*
 .bigger_text {
-	font_size: 6vw;
+	font-size: 6vw;
 
-}
+}*/
 
 .removePage {
 	position: absolute;
