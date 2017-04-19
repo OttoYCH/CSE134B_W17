@@ -216,129 +216,34 @@
 	left: 2vw;
 }
 
-.loginimg_container {
-	position: absolute;
-	top: 28%;
-	left:10%; 
-}
-
-.loginimg_container img {
-  width: 20vw;
-	height: 22vh;
-}
-
-.loginimg_container h1 {
-	text-align: center;
-	font-size: 3vw;
-	font-weight: bold;
-	font-family: "Comic Sans MS";
-	color: #994C00;
-}
-
-.logininfo {
-	position: absolute;
-	top: 35%;
-	left: 35%;
-}
-
-.useremailcontainer {
-	position: relative;
-	font-family: "Comic Sans MS";
-	font-size: 3vw;
-}
-
-.useremailcontainer label {
-	clear: both;
-	float: left;
-	margin-right: 2vw;
-}
-
-.useremailcontainer input {
-	float: left;
-	height:3vw;
-	border-radius: 1vw;
-}
-
-.passwordcontainer {
-	position: relative;
-	font-family: "Comic Sans MS";
-	font-size: 3vw;
-}
-
-.passwordcontainer label {
-	clear: both;
-	float: left;
-	margin-right: 2vw;
-}
-
-.passwordcontainer input {
-	float: left;
-	height:3vw;
-	border-radius: 1vw;
-}
-
-.logincontainer {
-	position: absolute;
-	top: 150%;
-	left: 5%;
-	font-family: "Comic Sans MS";
-	font-size: 2vh;
-}
-
 #btnLogin {
-	/*position: absolute;
-	top: 15px;
-	left: 120%;
-	width: 15vw;
-	height: 5vh;*/
 	background-color: #007A06; 
     border: none;
     color: white;
     text-align: center;
-    /*font-size: 2vh;*/
     font-family: "Helvetica";
     font-weight: bold;
     border-radius: 4px;
 }
 
 #btnGoogle {
-	/*position: absolute;
-	top: -20px;
-	left: 120%;
-	width: 15vw;
-	height: 5vh;*/
 	background-color: #BE3D0E; 
     border: none;
     color: white;
     text-align: center;
-    /*font-size: 2vh;*/
     font-family: "Helvetica";
     font-weight: bold;
     border-radius: 4px;
 }
 
 #btnSignup {
-	/*position: absolute;
-	top: 50px;
-	left: 120%;
-	width: 15vw;
-	height: 5vh;*/
 	background-color: #126FA1; 
     border: none;
     color: white;
     text-align: center;
-    /*font-size: 2vh;*/
     font-family: "Helvetica";
     font-weight: bold;
     border-radius: 4px;
-}
-
-.forgetpw_container {
-	position: absolute;
-	top: 200%;
-	left: 5%;
-	font-family: "Comic Sans MS";
-	font-size: 2vh;
 }
 
 .buttonYes {
@@ -689,38 +594,66 @@ tr {
     font-weight:bold;
 }
 
-.searchPage {
-	position: absolute;
-	top:40%;
-	left:15%
+#searchPage_container {
+    margin: 0 auto;
+    padding-top: 30vh;
 }
 
 .searchbar input {
 	border-radius:2px;
-	border: solid 2px lightblue;
+	border: solid 1px lightblue;
 	text-align: left;        
 	font-family:Courier;        
 }
 
-.searchBtn {
-    background-color: #fffacd;
-    border-radius: 1vh;
-    color: red;
-    font-weight:bold;
+#searchCoffeeTitle {
+    opacity: 1;
+    font-family: Impact;
+    color: #ff9900;
+    text-align: center;
+    font-size: 2em;
+    padding-top: 0;
 }
 
-.randomcontainer {
-	background-color: lightblue;
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #e0e3eb;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #e0e3eb;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #e0e3eb;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #e0e3eb;
+}
+
+#searchBtn {
+    width: 3em;
+    height: 3em;
+}
+
+#randomBtn {
+	background-color: #005ce6;
     border-radius: 1vh;
     color: white;
     font-weight:bold;
+    width: 40%;
 }
 
-.backcontainer {
+#backBtn {
     background-color:#EEEEEE;
     border-radius: 1vh;
     color: black;
-    border:none;
+    font-weight:bold;
+    width: 40%;
+    
+}
+
+.btnGroup {
+    display: inline-block;
 }
 
 .StoragePage {

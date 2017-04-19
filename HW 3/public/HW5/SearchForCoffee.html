@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <link rel="stylesheet" type="text/css" href="./css/coffee.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-auth.js"></script>
@@ -11,22 +12,32 @@
     <title>Coffee-Dex</title> 
   </head>
   <body>
-    
-  <div class="searchPage">
-  	<div class="searchbar">
-      <input type="text" placeholder="Enter coffee title" id="coffee">
-      <button class="searchBtn" onclick="listCoffees()">Search</button>
-    </div>
-
-      <button onclick="location.href = './coffee_hunter.html?random';" class="randomcontainer">Random Coffee</button>
-	
-	
-		<button onclick="location.href = './main_page.html';" class="backcontainer">Back</button>
-
-    <div id="div1">
-    </div>
-	
-</div>  
+      
+      <div class="searchPage_bg">
+            <img src="./Dummy/login_bg.png" id="bg" alt="">
+      
+            <div class="row">
+                
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4" id="searchPage_container">
+                    <h1 id="searchCoffeeTitle">Find Out Favorite Coffee</h1>
+                    <div class="searchbar">
+                        <input type="text" placeholder="Enter coffee title" id="coffee">
+                        <button class="searchBtn" onclick="listCoffees()"><img src="./Dummy/search_icon.png" id="searchBtn"></button>
+                    </div>
+                    <div class="btnGroup">
+                        <button onclick="location.href = './coffee_hunter.html?random';" id="randomBtn">Random</button>
+		                <button onclick="location.href = './main_page.html';" id="backBtn">Back</button>
+                    </div>
+                    
+                    <div id="div1">
+                    </div>
+                    
+                </div>
+                <div class="col-sm-4"></div>        
+	        </div>
+         
+        </div>
     <script src="./js/app.min.js"></script>
 </body>
 
