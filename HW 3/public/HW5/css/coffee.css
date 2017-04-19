@@ -772,13 +772,23 @@ tr {
 }
 
 .small-input {
-	width:20vw;
-	height:5vw;
+    width: 50%;
+    height: 2em;
+    border-radius:2px;
+	border: solid 1px lightblue;
+	text-align: left;        
+	font-family:Courier;
+	/*width:20vw;
+	height:5vw;*/
 }
 
 .large-input {
-	width:80vw;
-	height:5vw;
+	width:30%;
+	height:2em;
+    border-radius:2px;
+	border: solid 1px lightblue;
+	text-align: left;        
+	font-family:Courier;
 }
 
 /*
@@ -860,6 +870,27 @@ tr {
 	height: 8em;
 	overflow:hidden;
 	vertical-align:bottom;
+}
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.5em;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
+
+#coffeeimg {
+    width: 8em;
+    height: 8em;
+    margin: 0 auto;
 }
 /*
 .rating:not(old) > input {
