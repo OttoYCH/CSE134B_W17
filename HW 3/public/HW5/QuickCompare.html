@@ -1,35 +1,57 @@
 <!DOCTYPE HTML>
 <html>
- <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" type="text/css" href="./css/coffee.css"> 
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="./css/coffee.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <script src="./js/app.min.js"></script>
+    <script src="./js/app.min.js"></script>
 
-  <title>Quick Compare</title>
- </head>
- <body>
+    <title>Quick Compare</title>
+</head>
+<body>
 
-<div class="page_container">
-  <table>
-     
-   <thead>
-    <tr> <th>  <th scope=row> Caramel Macchiato <th> Capuccino
-   <tbody>
-    <tr> <th scope=row> Served Hot? <td> Yes <td> Yes
-    <tr> <th scope=row> Price <td> $4.99 <td> $3.50
-    <tr> <th scope=row> Rating <td> 4/5 <td> 4.5/5
-    <tr> <th scope=row> Same Location? <td> No <td> No
-   </tbody>
-  </table>
-  <div class="center_reset">
-  <button onclick="location.href ='./CoffeeStorage.html';" class="buttonYes">Done</button>
-  </div>
+<div class="qp_page">
+    <h1 id="headline">Quick Compare</h1>
+    <img src="./Dummy/login_bg.png" id="bg" alt="">
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <table style="border: 1px solid darkblue; border-collapse: collapse;" rules="groups">
+                <thead style="border: 2px solid black;">
+                    <tr>
+                        <th></th>
+                        <th>
+                            <p>Caramel Macchiato</p>
+                        </th>
+                        <th>
+                            <p>Capuccino</p>
+                        </th>
+                    </tr>
+                    
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Served Hot</td><td>Yes</td><td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Price</td><td>$4.99</td><td>$3.5</td>
+                    </tr>
+                    <tr>
+                        <td>Rating</td><td>4</td><td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Same Location</td><td>No</td><td>No</td>
+                    </tr>
+                </tbody>
+                
+            </table>
+        <br style="height:2pt; visibility:hidden;" />
+        <button onclick="location.href ='./CoffeeStorage.html';" id="btnDone" style="margin: 0 auto; width: 60%;">Done</button>
+        </div>
+        <div class="col-sm-4"></div>
+    </div> 
 </div>
 
-
-
-
-
- </body>
+</body>
 </html>

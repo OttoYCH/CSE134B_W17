@@ -246,6 +246,16 @@
     border-radius: 4px;
 }
 
+#btnDone {
+    background-color: #007A06; 
+    border: none;
+    color: white;
+    text-align: center;
+    font-family: "Helvetica";
+    font-weight: bold;
+    border-radius: 4px;
+}
+
 .buttonYes {
 	width: 8vw;
 	height: 5vh;
@@ -818,23 +828,6 @@ tr {
 .reset_password {
 	font-size: 8vw;
 }
-
-.center_reset {
-	text-align: center;
-}
-
-.center_button {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: -50px;
-  margin-left: -100px;
-}
-/*
-.bigger_text {
-	font-size: 6vw;
-
-}*/
 
 .removePage {
 	position: absolute;
