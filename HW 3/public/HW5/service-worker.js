@@ -35,6 +35,7 @@ var filesToCache = [
        '/HW5/Dummy/mail_icon.png',
        '/HW5/Dummy/psw_icon.png',
        '/HW5/Dummy/login_bg.png',
+       '/HW5/Dummy/search_icon.png'
 ]
 
 self.addEventListener('install', function (e) {

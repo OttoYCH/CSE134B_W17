@@ -27,7 +27,7 @@ const btnSignup = document.getElementById('btnSignup');
  */
 function listCoffees() {
 	var input = document.getElementById("coffee").value;
-	document.getElementById("div1").innerHTML = "";
+	document.getElementById("outputList").innerHTML = "";
 	if (input === "") {
 		db.ref('coffees').on('value', function(snapshot) {
 			snapshot.forEach(function(Snapshot) {
@@ -38,7 +38,7 @@ function listCoffees() {
 				a_tag.appendChild(node);
 				var name = Snapshot.val().name;
 				a_tag.href = "./coffee_hunter.html?"+name;
-				var element = document.getElementById("div1");
+				var element = document.getElementById("outputList");
 				element.appendChild(para);
 			});
 		});
@@ -54,7 +54,7 @@ function listCoffees() {
 					a_tag.appendChild(node);
 					var name = Snapshot.val().name;
 					a_tag.href = "./coffee_hunter.html?"+name;
-					var element = document.getElementById("div1");
+					var element = document.getElementById("outputList");
 					element.appendChild(para);
 				}
 			});
