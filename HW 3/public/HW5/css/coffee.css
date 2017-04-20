@@ -9,10 +9,6 @@
     min-height: 100%;
 }
 
-.btn_class {
-    display: inline-block;
-}
-
 #headline {
     opacity: 1;
     font-family: Impact;
@@ -564,7 +560,7 @@ tr {
     color: white;
     border:none;
 }
-
+/*
 .uemailcontainer {
 	position: absolute;
 	top:40%;
@@ -582,14 +578,14 @@ tr {
 	border: solid 2px lightgreen;
   	box-shadow: 0 0 5px 1px lightblue;
 }
-
-.resetpw {
+*/
+#btnResetPsw {
     background-color: #fffacd;
     border-radius: 1vh;
     color: red;
-    font-size: 6vw;
     font-family: Courier;
     font-weight:bold;
+    width: 60%;
 }
 
 #searchPage_container {
@@ -797,11 +793,11 @@ tr {
 	border-radius: 1vw;
 }
 */
-
+/*
 .textbox_size {
 	width: 330px; 
 	height: 30px;
-}
+}*/
 
 .textbox_coffee_size {
 	width: 200px;
@@ -825,9 +821,10 @@ tr {
 	width: 330px;
 }
 
+/*
 .reset_password {
 	font-size: 8vw;
-}
+}*/
 
 .removePage {
 	position: absolute;
