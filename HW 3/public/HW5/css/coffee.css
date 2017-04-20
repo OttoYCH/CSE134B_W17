@@ -105,15 +105,6 @@
     min-width: 600px;
 }
 
-/*
-.centered {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: -50px;
-  margin-left: -100px;
-}*/
-
 .wireframe h1  {
 	color: red;
 	font-weight:bold;
@@ -298,78 +289,6 @@
 	text-align: center;
 }
 
-.buttonConfirm {
-	position: absolute;
-	top:45%;
-	left: 30%;
-	width: 9vw;
-	height: 4vh;
-	background-color: #58B957;
-	font-size: 2vh;
-	border-radius: 3px;
-	font-family: "Courier";
-	color: white;
-}
-
-.buttonDeconfirm {
-	position:absolute;
-	top: 45%;
-	left:40%;
-	width: 9vw;
-	height: 4vh;	
-	background-color: #DB524C;
-	font-size: 2vh;
-	border-radius: 3px;
-	font-family: "Courier";
-	color: white;
-}
-
-.add_message {
-	position:absolute;
-	margin: 1vw;
-	top:30%;
-	left: 10%;
-	text-align: center;
-	font-size: 3vh;
-	font-family: Courier;
-	color: grey;
-}
-
-.removeYes {
-	position: absolute;
-	top:45%;
-	left:20%;
-	width: 20vw;
-	height: 8vh;
-	background-color: #58B957;
-	font-size: 4vh;
-	border-radius: 3px;
-	font-family: Courier;
-	color: white;
-	text-align: center;
-} 
-
-.removeNo {
-	position:absolute;
-	top: 45%;
-	width: 20vw;
-	height: 8vh;	
-	background-color: #FF0000;
-	font-size: 4vh;
-	border-radius: 3px;
-	font-family: Courier;
-	color: white;
-	text-align: center;
-}
-
-.removemsg {
-	margin: 1vw;
-	text-align: center;
-	font-size: 5vh;
-	font-family: Courier;
-	color: grey;
-}
-
 .OrderDetail {
 	position: absolute;
 	top: 5%;
@@ -394,74 +313,6 @@ tr:hover {background-color: red}
 tr {
 	background-color: #455FFF;
     color: white;	
-}
-
-.QuickView table {
-	position: absolute;
-	top: 15%;
-	left:15%;
-}
-
-.orderimg {
-	position:absolute;
-	top: 50%;
-	left: 15%;
-}
-
-.orderimg img {
-	width: 10vw;
-	height: 10vw;
-}
-
-.orderYes {
-	position: absolute;
-	width: 15vw;
-	height: 8vh;
-	text-align: center;
-	background-color: #58B957;
-	font-size: 2vw;
-	font-family:Courier;
-	color: white;
-	top: 50vh;
-	left: 28vw;
-}
-
-.orderNo {
-	position: absolute;
-	width: 15vw;
-	height: 8vh;
-	text-align: center;
-	background-color: #DB524C;
-	font-size: 2vw;
-	font-family:Courier;
-	color: white;
-	top: 50vh;
-	left: 45vw;
-}
-
-.QPcontainer {
-	position: absolute;
-
-	top: 30%;
-	left: 5%;
-}
-
-.QPcontainer tr {
-	background-color: #97D077;
-	color: #994C00;
-}
-
-.QPDone {
-	position: absolute;
-	top: 55%;
-	left: 13%;
-	width: 12vw;
-	height: 8vw;
-	background-color: #3D8BCD;
-	border-radius: 2px;
-	font-size: 2vw;
-	font-family:Courier;
-	color: white;
 }
 
 .dropbtn {
@@ -532,25 +383,7 @@ tr {
     font-weight:bold;
     width: 46%;
 }
-/*
-.uemailcontainer {
-	position: absolute;
-	top:40%;
-	left:10%;
-}
 
-.uemailcontainer label {
-	font-size: 3vw;
-	font-family:Courier;
-	font-weight: bold;
-	color:lightblue;
-}
-
-.uemailcontainer input[type="text"] {
-	border: solid 2px lightgreen;
-  	box-shadow: 0 0 5px 1px lightblue;
-}
-*/
 #btnResetPsw {
     background-color: #fffacd;
     border-radius: 1vh;
@@ -713,15 +546,13 @@ tr {
     color:yellow;
 }
 
-.removebutton {
+#removeBtn {
 	background-color: #DB524C; 
     border: none;
     color: white;
-    text-align: center;
-    font-size: 2vh;
     font-family: "Comic Sans MS";
     font-weight: bold;
-    border-radius: 4px;
+    border-radius: 1vh;
 }
 
 .infocontainer label {
@@ -755,56 +586,17 @@ tr {
 #phone_icon {
     width: 2em;
 }
-/*
-.usernamecontainer label {
-	clear: both;
-	float: left;
-	margin-right: 2vw;
+
+.notes_textarea {
+  width: 80%;
 }
 
-.usernamecontainer input {
-	float: left;
-	height:3vw;
-	border-radius: 1vw;
-}
-*/
-
-.textbox_coffee_size {
-	width: 200px;
-	height:30px;
-}
-
-.text_size {
-	font-size: 125%;
-}
-
-.bg-warning {
-	background-color: #fcf8e3;
-}
-
-.notes-textarea {
-  width: 300px;
-  height: 120px;
+#note {
+    border: 1px solid #888; 
 }
 
 .hyperlink {
 	width: 330px;
-}
-
-/*
-.reset_password {
-	font-size: 8vw;
-}*/
-
-.removePage {
-	position: absolute;
-	top: 30%;
-	left: 5%;
-}
-
-.btnRemovePage {
-	position: absolute;
-	left: 40%;
 }
 
 .rating:not(old) {
