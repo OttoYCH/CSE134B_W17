@@ -4,32 +4,39 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <link rel="stylesheet" type="text/css" href="./css/coffee.css">
-        <script src="./js/app.min.js"></script>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="./js/app.min.js"></script>
 	<title>Share with Friend</title>
 </head>
 <body>
-<div class="centered">
-<div class="infocontainer">
-	<div class="StorageList">
-		<button class="dropbtn">Coffee Storage</button>
-		<div class="dropdown-content">
-			<a href="#">White Mocha</a>
-			<a href="#">Caramel Macchiato</a>
-			<a href="#">Green Tea Frappuccino</a>
-			<a href="#">Vanilla Latte</a>
-			<a href="#">Cappuccino</a>
-			<a href="#">Americano</a>
-	</div>
+<div class="share">
+    <h1 id="headline">Share With Friends</h1>
+    <img src="./Dummy/login_bg.png" id="bg" alt="">
+    
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="infocontainer">
+	           <div class="StorageList">
+		          <button class="dropbtn">Coffee Storage</button>
+		          <div class="dropdown-content">
+			         <a href="#">White Mocha</a>
+			         <a href="#">Caramel Macchiato</a>
+			         <a href="#">Green Tea Frappuccino</a>
+			         <a href="#">Vanilla Latte</a>
+                     <a href="#">Cappuccino</a>
+			         <a href="#">Americano</a>
+	              </div>
+               </div> 
+            </div>
+            
+            <div style="padding-top:22em;">
+               <button onclick="location.href ='./EnterPhoneNumber.html';" id="addBtn" style="width: 80%;">Select Friends</button>
+	           <button onclick="location.href ='./main_page.html';" id="backBtn" style="width: 80%;">Back</button>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
 </div>
-  
-  
-</div>
-<br/>
-
-	<button onclick="location.href ='./EnterPhoneNumber.html';" class="addbutton">Select Friends</button>
-
-	<button onclick="location.href ='./main_page.html';" class="backbutton">Back</button>
-
 </body>
 </html>
