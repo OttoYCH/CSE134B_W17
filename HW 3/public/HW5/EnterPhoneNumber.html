@@ -4,25 +4,34 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <link rel="stylesheet" type="text/css" href="./css/coffee.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<title>Enter Phone Number</title>
 </head>
 <body>
 
-<div class="phonenumber">
-	<h1>Enter the phone number</h1>
-	
-	<img src="./Dummy/phone.png" alt="Enter phone number" width="32" height="32">
-
-	<input type="text" class="phonenumber_input" placeholder="Phonenumber" id="phonenumber" required>
-
-	<button class="mobile">Call</button>
-	<br>
-	<div class="center_reset">
-	<button class="sendBtn">Send Text</button>
-
-	<button onclick="location.href ='./ShareWithFriends.html';" class="cancelBtn">Cancel</button>
-	</div>
-</div>
+    <div class="phonenumber">
+        <h1 id="headline">Share With Friends</h1>
+        <img src="./Dummy/login_bg.png" id="bg" alt="">    
+        
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="btnGroup">
+                    <input type="text" placeholder="Phone number" style="width: 70%;" required>
+                    <img src="./Dummy/phone.png" alt="Enter phone number" id="phone_icon">
+                </div>
+                <br style="height:2pt; visibility:hidden;" />
+	            <button id="btnCall">Call</button>
+                <br style="height:2pt; visibility:hidden;" />
+                <div class="btnGroup">
+                    <button id="btnSend">Send Text</button>
+	                <button onclick="location.href ='./ShareWithFriends.html';" id="btnCancel">Cancel</button>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+    
     <script src="./js/app.min.js"></script>
 
 </body>

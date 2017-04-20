@@ -504,61 +504,32 @@ tr {
     background-color: #daa520;
 }
 
-.selectFriend {
-	position:absolute;
-	top:8%;
-	left:110%;
-    background-color: #008CFF;
-    width: 24vw;
-    height:10vh; 
+#btnCall {
+    background-color:#008CFF;
     border-radius: 1vh;
     color: white;
-    padding: 15px 32px;
-    font-size: 2vh;
+    border:4px;
+    border-color:#52527a;
+    font-weight:bold;
+    width: 55%;
 }
 
-.sharefriend {
-	position: absolute;
-	top: 30%;
-	left: 12%
-}
-
-.phonenumber {
-	width: 90vw;
-	height: 40vh;
-	position: absolute;
-	top:25%;
-	left:5%;
-}
-
-.phonenumber h1 {
-	color:#000000;
-	font-size:4vw;
-	font-family:Courier;
-}
-
-.phonenumber_input {
-	height:4vh;
-	border-radius: 1vw;
-	font-size:4vh;
-}
-
-.mobile {
-	background-color:#EEEEEE;
-}
-
-.sendBtn {
+#btnSend {
     background-color: #58B957;
     border-radius: 1vh;
     border:none;
     color: white;
+    font-weight:bold;
+    width: 46%;
 }
 
-.cancelBtn {
+#btnCancel {
     background-color: #DB524C;
     border-radius: 1vh;
     color: white;
     border:none;
+    font-weight:bold;
+    width: 46%;
 }
 /*
 .uemailcontainer {
@@ -780,6 +751,9 @@ tr {
 	font-family:Courier;
 }
 
+#phone_icon {
+    width: 2em;
+}
 /*
 .usernamecontainer label {
 	clear: both;
@@ -793,11 +767,6 @@ tr {
 	border-radius: 1vw;
 }
 */
-/*
-.textbox_size {
-	width: 330px; 
-	height: 30px;
-}*/
 
 .textbox_coffee_size {
 	width: 200px;
